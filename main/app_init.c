@@ -4,8 +4,12 @@
  *  Created on: Jun 15, 2024
  *      Author: anh
  */
-
+#include "config.h"
 #include "stm32h7xx_hal.h"
+#include "drivers/mpu.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+
 
 
 
@@ -18,6 +22,7 @@ static void MX_UART8_Init(void);
 void Error_Handler(void);
 
 int app_init(void){
+	mpu_region_config();
 	MPU_Config();
 
 	SCB_EnableICache();
@@ -28,6 +33,12 @@ int app_init(void){
 	SystemClock_Config();
 	MX_GPIO_Init();
 	MX_UART8_Init();
+
+	extern void app_main(void *param);
+	xTaskCreate(app_main, "app_main", 1024, NULL, 5, NULL);
+
+	__NVIC_SetPriority(SVCall_IRQn, 0U);
+	vTaskStartScheduler();
 
 	return 0;
 }

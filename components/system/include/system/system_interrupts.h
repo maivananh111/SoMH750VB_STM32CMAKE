@@ -5,12 +5,12 @@
  *      Author: anh
  */
 
-#ifndef SYSTEM_INTERRUPTS_H_
-#define SYSTEM_INTERRUPTS_H_
+#ifndef COMPONENTS_SYSTEM_SYSTEM_INTERRUPTS_H_
+#define COMPONENTS_SYSTEM_SYSTEM_INTERRUPTS_H_
 
 
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
 
 
@@ -30,4 +30,4 @@ void ETH_IRQHandler(void);
 }
 #endif
 
-#endif /* SYSTEM_INTERRUPTS_H_ */
+#endif /* COMPONENTS_SYSTEM_SYSTEM_INTERRUPTS_H_ */

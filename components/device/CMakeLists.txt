@@ -1,18 +1,20 @@
 cmake_minimum_required(VERSION 3.20)
 
 
-set(PROJECT_NAME components_lib2)
+set(PROJECT_NAME components_device)
 
 project(${PROJECT_NAME})
 add_library(${PROJECT_NAME} INTERFACE)
 enable_language(C CXX ASM)
 
 target_include_directories(${PROJECT_NAME} INTERFACE
-    .
+	.
 )
 target_sources(${PROJECT_NAME} INTERFACE
-	lib2.c
+	system_stm32h7xx.c
+    sysmem.c
+    syscalls.c
+    startup_stm32h750vbtx.s
 )
 target_link_directories(${PROJECT_NAME} INTERFACE)
-target_link_libraries(${PROJECT_NAME} INTERFACE components_lib1)
-
+target_link_libraries(${PROJECT_NAME} INTERFACE components_hal)

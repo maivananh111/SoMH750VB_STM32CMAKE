@@ -8,8 +8,7 @@ add_library(${PROJECT_NAME} INTERFACE)
 enable_language(C CXX ASM)
 
 target_include_directories(${PROJECT_NAME} INTERFACE
-    core
-    device
+	.
 )
 target_sources(${PROJECT_NAME} INTERFACE
 

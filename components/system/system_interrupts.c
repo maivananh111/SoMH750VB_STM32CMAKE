@@ -5,9 +5,10 @@
  *      Author: anh
  */
 
-#include "interrupts.h"
+#include "system/system_interrupts.h"
 #include "stm32h7xx_hal.h"
-
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 
 void NMI_Handler(void){
@@ -40,20 +41,16 @@ void UsageFault_Handler(void){
 	}
 }
 
-void SVC_Handler(void){
-
-}
-
 void DebugMon_Handler(void){
-
-}
-
-void PendSV_Handler(void){
 
 }
 
 void SysTick_Handler(void){
 	HAL_IncTick();
+
+	if (xTaskGetSchedulerState() != taskSCHEDULER_NOT_STARTED){
+		xPortSysTickHandler();
+	}
 }
 
 void ETH_IRQHandler(void){

@@ -2,32 +2,38 @@ cmake_minimum_required(VERSION 3.20)
 
 ############ CHANGE BUILD TARGET NAME ############
 get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_LIST_DIR} NAME)
+set(CONFIG_H_IN_FILE            "tools/config.h.in")
+set(CONFIG_H_FILE               "config.h")
 set(CMAKE_TOOLCHAIN_FILE 		"tools/gcc-arm-none-eabi.cmake")
 set(LINKER_FILE    				"${CMAKE_SOURCE_DIR}/components/system/STM32H750VBTX_FLASH.ld")
+
 set(MACROS_DEFINATION
 	USE_HAL_DRIVER 
 	STM32H750xx
     $<$<CONFIG:Debug>:DEBUG>
 ) 
+
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE 		"Debug")
 endif()
-include(${CMAKE_TOOLCHAIN_FILE})
 
 message("***Project       : ${PROJECT_NAME}")
 message("***Build type    : ${CMAKE_BUILD_TYPE}")
 message("***Toolchain file: ${CMAKE_TOOLCHAIN_FILE}")
 message("***Linker file   : ${LINKER_FILE}")
+message("***Binary dir    : ${CMAKE_BUILD_TYPE}")
+
+include(${CMAKE_TOOLCHAIN_FILE})
 
 ################## PROJECT SETUP #################
 enable_language(C CXX ASM)
-project(${PROJECT_NAME})
 
+project(${PROJECT_NAME})
 add_executable(${PROJECT_NAME})
-#target_compile_definitions(${PROJECT_NAME} INTERFACE ${MACROS_DEFINATION})
+
 add_compile_definitions(${MACROS_DEFINATION})
-add_compile_options(-U__SOFTFP__)
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${PROJECT_NAME}>)
+configure_file(${CONFIG_H_IN_FILE} ${CONFIG_H_FILE})
 
 ################# LIBRARIES LINK #################
 add_subdirectory(main)
@@ -36,9 +42,13 @@ add_subdirectory(components)
 target_link_libraries(${PROJECT_NAME}
     main
     components_cmsis
-	components_system
+    components_device
     components_hal
+    components_system
+	components_freertos
 )
+
+include_directories(${CMAKE_BUILD_TYPE})
 
 
 ################# DO NOT CHANGE THIS VARIABLES #################

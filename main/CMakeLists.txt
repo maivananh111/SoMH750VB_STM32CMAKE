@@ -16,13 +16,13 @@ target_sources(${PROJECT_NAME} INTERFACE
     app_main.c
 )
 
-target_link_directories(${PROJECT_NAME} INTERFACE)
 target_link_libraries(${PROJECT_NAME} INTERFACE
-	components_lib2
+	components_drivers
 )
 
+target_link_directories(${PROJECT_NAME} INTERFACE 
 
-
+)
 
 
 

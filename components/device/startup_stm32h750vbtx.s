@@ -95,8 +95,6 @@ LoopFillZerobss:
   bl __libc_init_array
 /* Call the application's init entry point.*/
   bl app_init
-/* Call the application's entry point.*/
-  bl app_main
 
 LoopForever:
   b LoopForever
