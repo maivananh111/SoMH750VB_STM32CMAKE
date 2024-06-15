@@ -12,7 +12,8 @@ target_include_directories(${PROJECT_NAME} INTERFACE
 )
 
 target_sources(${PROJECT_NAME} INTERFACE
-    main.cpp
+	app_init.c
+    app_main.c
 )
 
 target_link_directories(${PROJECT_NAME} INTERFACE)

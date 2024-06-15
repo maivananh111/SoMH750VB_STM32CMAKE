@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 
 set(PROJECT_NAME components_hal)
-file(GLOB HAL_SOURCE_FILES "*.c")
+file(GLOB HAL_SOURCE_FILES "source/*.c")
 
 
 project(${PROJECT_NAME})

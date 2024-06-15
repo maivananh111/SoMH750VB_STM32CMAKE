@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
 
-
 ############ CHANGE BUILD TARGET NAME ############
 get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_LIST_DIR} NAME)
 set(CMAKE_TOOLCHAIN_FILE 		"tools/gcc-arm-none-eabi.cmake")
@@ -27,6 +26,7 @@ project(${PROJECT_NAME})
 add_executable(${PROJECT_NAME})
 #target_compile_definitions(${PROJECT_NAME} INTERFACE ${MACROS_DEFINATION})
 add_compile_definitions(${MACROS_DEFINATION})
+add_compile_options(-U__SOFTFP__)
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${PROJECT_NAME}>)
 
 ################# LIBRARIES LINK #################

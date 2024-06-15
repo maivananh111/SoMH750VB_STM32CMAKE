@@ -20,7 +20,10 @@ target_sources(${PROJECT_NAME} INTERFACE
     startup_stm32h750vbtx.s
 )
 target_link_directories(${PROJECT_NAME} INTERFACE)
-target_link_libraries(${PROJECT_NAME} INTERFACE)
+target_link_libraries(${PROJECT_NAME} INTERFACE 
+	components_hal
+	components_cmsis	
+)
 
 
 

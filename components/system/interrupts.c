@@ -6,6 +6,7 @@
  */
 
 #include "interrupts.h"
+#include "stm32h7xx_hal.h"
 
 
 
@@ -52,7 +53,7 @@ void PendSV_Handler(void){
 }
 
 void SysTick_Handler(void){
-
+	HAL_IncTick();
 }
 
 void ETH_IRQHandler(void){
