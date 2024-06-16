@@ -1,1 +1,0 @@
-#undef __SOFTFP__
