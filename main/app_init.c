@@ -12,7 +12,6 @@
 
 
 
-
 UART_HandleTypeDef huart8;
 
 void SystemClock_Config(void);
