@@ -1,0 +1,6 @@
+Bootloader/Debug/
+ExLoader/Debug/
+nvs_write_memory/Debug/
+SoMH750VB/build/
+.git/
+
