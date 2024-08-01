@@ -1,0 +1,3 @@
+- In startup file, change SystemInit -> cpu_startup
+- In startup file, change main -> app_initialize
+- In linker file, change start address and size of FLASH session. 
