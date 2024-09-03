@@ -1157,6 +1157,8 @@ typedef struct xSTATIC_TCB
 	#if ( configUSE_POSIX_ERRNO == 1 )
 		int				iDummy22;
 	#endif
+
+		uint32_t 		ulDummy23;
 } StaticTask_t;
 
 /*

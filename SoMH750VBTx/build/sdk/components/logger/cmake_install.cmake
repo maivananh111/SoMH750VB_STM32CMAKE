@@ -1,4 +1,4 @@
-# Install script for directory: /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/sdk/components/logger
+# Install script for directory: /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/components/logger
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/bin/arm-none-eabi-objdump")
+  set(CMAKE_OBJDUMP "/home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/bin/arm-none-eabi-objdump")
 endif()
 

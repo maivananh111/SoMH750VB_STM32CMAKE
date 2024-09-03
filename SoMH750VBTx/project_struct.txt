@@ -1,0 +1,37 @@
+
+project direction/
+
+
+|____/build
+	|____user binary files
+	|____config.h
+	
+	
+|____/sdk
+
+	|____/common
+		|____common files
+		
+		
+	|____/core
+		|____/cpu
+			|____cmsis cortex files
+		|____/mcu		
+			|____linker file
+			|____startup file
+			|____mcu stm32xxxxxx files	
+		|____/sys		
+			|____runtime library function declare files
+			|____system stm32xxxxxx files		
+
+
+	|____/drivers
+		|____/hal
+		|____/drivers
+
+
+
+
+
+
+

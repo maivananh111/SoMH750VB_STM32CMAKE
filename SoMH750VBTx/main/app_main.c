@@ -1,82 +1,57 @@
 
 
+#include <macros.h>
 #include <stdint.h>
 
-#include "stm32h7xx.h"
 #include "stm32h7xx_hal.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "config.h"
 #include "logger.h"
-#include "macro.h"
+#include "string.h"
+#include "stm32h7xx.h"
+#include "periph/qspi.h"
 
-//.s
+
 extern const unsigned char _binary_file_xyz_txt[];
-extern UART_HandleTypeDef huart8;
 static const char *TAG = "MAIN";
 
 
+void write_flash(void) __attribute__((section(".ram_d3_section")));
 
-void restore_context(void){
-//	#define BOOT_PC_ADDRESS  0x38000010UL
-//	#define BOOT_MSP_ADDRESS 0x38000014UL
-//	#define APP_PC_ADDRESS   0x38000020UL
-//	#define APP_MSP_ADDRESS  0x38000024UL
-//
-//	__IO uint32_t app_msp, app_pc;
-//	__IO uint32_t boot_msp, boot_pc;
-	void (*u_app_program)(void);
+void write_flash(void){
+	LOGW("QSPI", "start write to flash");
 
-	/**
-	 * Save machine states.
-	 */
-//    __asm volatile ("mrs %0, msp" : "=r" (app_msp));
-//    __asm volatile ("mov %0, pc" : "=r" (app_pc));
-//    *((__IO uint32_t*)APP_PC_ADDRESS) = app_pc;
-//    *((__IO uint32_t*)APP_MSP_ADDRESS) = app_msp;
-
-	/**
-	 * Jump to application.
-	 */
-//    boot_pc = *((volatile uint32_t*)BOOT_PC_ADDRESS)+8;
-//    boot_msp = *((volatile uint32_t*)BOOT_MSP_ADDRESS);
-//    LOGI(TAG, "bootloader pc = 0x%x, msp = 0x%x", boot_pc, boot_msp);
-
-	SCB_DisableDCache();
-	SCB_DisableICache();
 	__disable_irq();
-	u_app_program = (void (*)(void)) (*(uint32_t*) (0x08010000 + 4));
-	__set_MSP(*(__IO uint32_t*) (0x08010000));
-	u_app_program();
+	qspi_exit_memory_mapped_mode();
+
+	if(qspi_erase_sector(0x400000, 0x4000FF) != HAL_OK)
+		LOGE(TAG, "qspi erase sector failed");
+
+	if(qspi_write_memory(0x400000, (uint8_t *)"abcd", 4) != HAL_OK)
+		LOGE(TAG, "qspi write memory failed");
+
+	qspi_enter_memory_mapped_mode();
+	__enable_irq();
+
+	LOGW("QSPI", "end write to flash");
 }
+
+
 
 void task1(void *param){
 	(void)param;
 
 	while(1){
-		float x = 123.45;
-//		LOGE(TAG, "x = %f", x);
-//		LOGA(TAG, "x = %f", x);
-//		LOGW(TAG, "x = %f", x);
-//		LOGI(TAG, "x = %f", x);
-		LOGD(TAG, "x = %f", x);
-		LOGV(TAG, "x = %f", x);
-		LOGE_P("EE", "x = %f", x);
-		vTaskDelay(500);
-		LOGA_P("FF", "x = %f", x);
-		vTaskDelay(500);
-		LOGW_P("GG", "x = %f", x);
-		vTaskDelay(500);
-		LOGI_P("HH", "x = %f", x);
-		vTaskDelay(500);
+		write_flash();
 
-		restore_context();
-//		LOGI("II", "%s", _binary_file_xyz_txt);
+		vTaskDelay(1000);
+//		LOGI("II", "%s", z);
 	}
 }
 
 void app_main(void){
 	log_set_filtermax_style(TAG, LOG_VERBOSE, LOG_STYLE_DEFAULT);
 
-	xTaskCreate(task1, "task1", 1024, NULL, 2, NULL);
+	xTaskCreate(task1, "task1", bytes_to_words(1024), NULL, 2, NULL);
 }

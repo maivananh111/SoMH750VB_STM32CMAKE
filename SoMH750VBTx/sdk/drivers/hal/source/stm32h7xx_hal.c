@@ -341,6 +341,17 @@ __weak uint32_t HAL_GetTick(void)
 }
 
 /**
+  * @brief Provides a tick value in millisecond, execute in RAM.
+  * @note This function is declared as __weak to be overwritten in case of other
+  *       implementations in user file.
+  * @retval tick value
+  */
+__weak uint32_t HAL_GetTick_From_RAM(void)
+{
+  return uwTick;
+}
+
+/**
   * @brief This function returns a tick priority.
   * @retval tick priority
   */

@@ -53,7 +53,7 @@ typedef enum {
 #define LOGV_P(tag, ...) LOG_LEVEL_VERBOSE(tag, LOG_PREVLINE, __VA_ARGS__)
 
 
-void log_port_flush_string(char *string, uint16_t lenght);
+void log_port_flush_string(char *string, uint16_t length);
 uint32_t log_port_get_systime(void);
 
 void log_enable(void);
@@ -70,6 +70,9 @@ void LOG_LEVEL_WARNING(const char *tag, bool prevline, const char *format, ...);
 void LOG_LEVEL_INFO   (const char *tag, bool prevline, const char *format, ...);
 void LOG_LEVEL_DEBUG  (const char *tag, bool prevline, const char *format, ...);
 void LOG_LEVEL_VERBOSE(const char *tag, bool prevline, const char *format, ...);
+
+void LOG_FAULT(const char *format, ...);
+void LOG_BASE (const char *format, ...);
 
 
 #ifdef __cplusplus

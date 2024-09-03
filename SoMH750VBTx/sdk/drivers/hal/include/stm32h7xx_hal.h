@@ -1073,6 +1073,7 @@ HAL_StatusTypeDef HAL_InitTick (uint32_t TickPriority);
 void HAL_IncTick(void);
 void HAL_Delay(uint32_t Delay);
 uint32_t HAL_GetTick(void);
+uint32_t HAL_GetTick_From_RAM(void) __attribute__((section(".ram_d3_section")));
 uint32_t HAL_GetTickPrio(void);
 HAL_StatusTypeDef HAL_SetTickFreq(HAL_TickFreqTypeDef Freq);
 HAL_TickFreqTypeDef HAL_GetTickFreq(void);

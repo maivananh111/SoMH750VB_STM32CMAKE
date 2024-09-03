@@ -1,3 +1,31 @@
 - In startup file, change SystemInit -> cpu_startup
+
 - In startup file, change main -> app_initialize
+
 - In linker file, change start address and size of FLASH session. 
+
+- In freertos/tasks.c
+	+ Add StackType_t usStackDepth; at the end of struct tskTCB; 
+	+ Add uint32_t ulDummy23; at the end of struct StaticTask_t; 
+	
+- In linker file, add:
+	/* Highest address of the user mode text */
+	_stext  = ORIGIN(EFLASH);    				  /* start of FLASH */
+	_etext  = ORIGIN(EFLASH) + LENGTH(EFLASH);    /* end of FLASH */
+	/* Highest address of the user mode stack */
+	_sstack = ORIGIN(RAM_D1);    				  /* start of RAM */
+	
+- In stm32h7xx_hal.h, add:
+	uint32_t HAL_GetTick_From_RAM(void) __attribute__((section(".ram_d3_section")));
+
+- In stm32h7xx_hal.c, add:
+	/**
+	  * @brief Provides a tick value in millisecond, execute in RAM.
+	  * @note This function is declared as __weak to be overwritten in case of other
+	  *       implementations in user file.
+	  * @retval tick value
+	  */
+	__weak uint32_t HAL_GetTick_From_RAM(void)
+	{
+	  return uwTick;
+	}

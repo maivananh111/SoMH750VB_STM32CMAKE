@@ -66,12 +66,12 @@ static log_tagprop_t _tagprop[LOG_NUM_PROP_SET];
 static uint8_t _num_tagprop = 0;
 static bool _prev_is_prevline = false;
 
-static log_stylecolor_t _default_loge = LOG_BASIC_RED;	  // error.
+static log_stylecolor_t _default_loge = LOG_BASIC_RED;	   // error.
 static log_stylecolor_t _default_loga = LOG_BASIC_PURPLE;  // assert.
 static log_stylecolor_t _default_logw = LOG_BASIC_YELLOW;  // warning.
-static log_stylecolor_t _default_logi = LOG_BASIC_GREEN;	  // info.
+static log_stylecolor_t _default_logi = LOG_BASIC_GREEN;   // info.
 static log_stylecolor_t _default_logd = LOG_BASIC_BLUE;    // debug.
-static log_stylecolor_t _default_logv = LOG_BASIC_CYAN;    // debug.
+static log_stylecolor_t _default_logv = LOG_BASIC_CYAN;    // verbose.
 
 static const char *COLOR_END = "\033[0m";
 static const char *COLOR_START[] = {
@@ -112,9 +112,9 @@ static const char *COLOR_START[] = {
 	"\033[47m",
 };
 
-__attribute__((weak)) void log_port_flush_string(char *string, uint16_t lenght){
+__attribute__((weak)) void log_port_flush_string(char *string, uint16_t length){
 	(void)string;
-	(void)lenght;
+	(void)length;
 }
 
 __attribute__((weak)) uint32_t log_port_get_systime(void){
@@ -269,6 +269,39 @@ void LOG_LEVEL_VERBOSE(const char *tag, bool prevline, const char *format, ...){
 	va_list args;
 	va_start(args, format);
 	_log(LOG_VERBOSE, _default_logv, prevline, 'V', tag, format, args);
+	va_end(args);
+}
+
+
+void LOG_FAULT(const char *format, ...){
+	char *arg_buffer = NULL;
+	char *out_buffer = NULL;
+	va_list args;
+
+	va_start(args, format);
+	vasprintf(&arg_buffer, format, args);
+	asprintf(&out_buffer, "\r\nFAULT: %s", arg_buffer);
+
+	log_port_flush_string(out_buffer, strlen(out_buffer));
+
+	if(arg_buffer) free(arg_buffer);
+	if(out_buffer) free(out_buffer);
+	va_end(args);
+}
+
+void LOG_BASE(const char *format, ...){
+	char *arg_buffer = NULL;
+	char *out_buffer = NULL;
+	va_list args;
+
+	va_start(args, format);
+	vasprintf(&arg_buffer, format, args);
+	asprintf(&out_buffer, "\r\n%s", arg_buffer);
+
+	log_port_flush_string(out_buffer, strlen(out_buffer));
+
+	if(arg_buffer) free(arg_buffer);
+	if(out_buffer) free(out_buffer);
 	va_end(args);
 }
 

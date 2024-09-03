@@ -54,16 +54,16 @@ RM = /home/anh/.espressif/tools/cmake/3.24.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB
+CMAKE_SOURCE_DIR = /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/build
+CMAKE_BINARY_DIR = /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SoMH750VB.dir/all
+all: CMakeFiles/SoMH750VBTx.dir/all
 all: main/all
 all: sdk/all
 .PHONY : all
@@ -74,7 +74,7 @@ preinstall: sdk/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SoMH750VB.dir/clean
+clean: CMakeFiles/SoMH750VBTx.dir/clean
 clean: main/clean
 clean: sdk/clean
 .PHONY : clean
@@ -146,16 +146,37 @@ sdk/common/clean:
 # Directory level rules for directory sdk/components
 
 # Recursive "all" directory target.
+sdk/components/all: sdk/components/faultanalyzer/all
 sdk/components/all: sdk/components/logger/all
+sdk/components/all: sdk/components/systeminfo/all
 .PHONY : sdk/components/all
 
 # Recursive "preinstall" directory target.
+sdk/components/preinstall: sdk/components/faultanalyzer/preinstall
 sdk/components/preinstall: sdk/components/logger/preinstall
+sdk/components/preinstall: sdk/components/systeminfo/preinstall
 .PHONY : sdk/components/preinstall
 
 # Recursive "clean" directory target.
+sdk/components/clean: sdk/components/faultanalyzer/clean
 sdk/components/clean: sdk/components/logger/clean
+sdk/components/clean: sdk/components/systeminfo/clean
 .PHONY : sdk/components/clean
+
+#=============================================================================
+# Directory level rules for directory sdk/components/faultanalyzer
+
+# Recursive "all" directory target.
+sdk/components/faultanalyzer/all:
+.PHONY : sdk/components/faultanalyzer/all
+
+# Recursive "preinstall" directory target.
+sdk/components/faultanalyzer/preinstall:
+.PHONY : sdk/components/faultanalyzer/preinstall
+
+# Recursive "clean" directory target.
+sdk/components/faultanalyzer/clean:
+.PHONY : sdk/components/faultanalyzer/clean
 
 #=============================================================================
 # Directory level rules for directory sdk/components/logger
@@ -171,6 +192,21 @@ sdk/components/logger/preinstall:
 # Recursive "clean" directory target.
 sdk/components/logger/clean:
 .PHONY : sdk/components/logger/clean
+
+#=============================================================================
+# Directory level rules for directory sdk/components/systeminfo
+
+# Recursive "all" directory target.
+sdk/components/systeminfo/all:
+.PHONY : sdk/components/systeminfo/all
+
+# Recursive "preinstall" directory target.
+sdk/components/systeminfo/preinstall:
+.PHONY : sdk/components/systeminfo/preinstall
+
+# Recursive "clean" directory target.
+sdk/components/systeminfo/clean:
+.PHONY : sdk/components/systeminfo/clean
 
 #=============================================================================
 # Directory level rules for directory sdk/core
@@ -192,14 +228,17 @@ sdk/core/clean:
 
 # Recursive "all" directory target.
 sdk/drivers/all: sdk/drivers/hal/all
+sdk/drivers/all: sdk/drivers/periph/all
 .PHONY : sdk/drivers/all
 
 # Recursive "preinstall" directory target.
 sdk/drivers/preinstall: sdk/drivers/hal/preinstall
+sdk/drivers/preinstall: sdk/drivers/periph/preinstall
 .PHONY : sdk/drivers/preinstall
 
 # Recursive "clean" directory target.
 sdk/drivers/clean: sdk/drivers/hal/clean
+sdk/drivers/clean: sdk/drivers/periph/clean
 .PHONY : sdk/drivers/clean
 
 #=============================================================================
@@ -216,6 +255,21 @@ sdk/drivers/hal/preinstall:
 # Recursive "clean" directory target.
 sdk/drivers/hal/clean:
 .PHONY : sdk/drivers/hal/clean
+
+#=============================================================================
+# Directory level rules for directory sdk/drivers/periph
+
+# Recursive "all" directory target.
+sdk/drivers/periph/all:
+.PHONY : sdk/drivers/periph/all
+
+# Recursive "preinstall" directory target.
+sdk/drivers/periph/preinstall:
+.PHONY : sdk/drivers/periph/preinstall
+
+# Recursive "clean" directory target.
+sdk/drivers/periph/clean:
+.PHONY : sdk/drivers/periph/clean
 
 #=============================================================================
 # Directory level rules for directory sdk/freertos
@@ -263,30 +317,30 @@ sdk/system/clean:
 .PHONY : sdk/system/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SoMH750VB.dir
+# Target rules for target CMakeFiles/SoMH750VBTx.dir
 
 # All Build rule for target.
-CMakeFiles/SoMH750VB.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45 "Built target SoMH750VB"
-.PHONY : CMakeFiles/SoMH750VB.dir/all
+CMakeFiles/SoMH750VBTx.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Built target SoMH750VBTx"
+.PHONY : CMakeFiles/SoMH750VBTx.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SoMH750VB.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/build/CMakeFiles 45
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SoMH750VB.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/build/CMakeFiles 0
-.PHONY : CMakeFiles/SoMH750VB.dir/rule
+CMakeFiles/SoMH750VBTx.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build/CMakeFiles 49
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SoMH750VBTx.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build/CMakeFiles 0
+.PHONY : CMakeFiles/SoMH750VBTx.dir/rule
 
 # Convenience name for target.
-SoMH750VB: CMakeFiles/SoMH750VB.dir/rule
-.PHONY : SoMH750VB
+SoMH750VBTx: CMakeFiles/SoMH750VBTx.dir/rule
+.PHONY : SoMH750VBTx
 
 # clean rule for target.
-CMakeFiles/SoMH750VB.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/clean
-.PHONY : CMakeFiles/SoMH750VB.dir/clean
+CMakeFiles/SoMH750VBTx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/clean
+.PHONY : CMakeFiles/SoMH750VBTx.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

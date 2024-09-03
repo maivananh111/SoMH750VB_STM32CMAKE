@@ -7,17 +7,24 @@
 #include "config.h"
 #include "string.h"
 
+#include "app_hw_init.h"
 #include "stm32h7xx.h"
 #include "stm32h7xx_hal.h"
 #include "stm32h7xx_hal_conf.h"
-#include "app_hw_init.h"
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "logger.h"
+#include "faultanalyzer.h"
+#include "systeminfo.h"
 
 
-static const char *TAG = "cpu startup";
 
+static const char *TAG = "startup";
+
+
+
+static void log_system_info(void);
 
 void app_main_task(void *param){
 	(void)param;
@@ -43,8 +50,9 @@ int app_initialize(void){
 	MX_GPIO_Init();
 	MX_UART8_Init();
 
+	fault_analyzer_init();
 
-	LOGI(TAG, "Application startup.");
+	log_system_info();
 
 	xTaskCreate(app_main_task, "app_main_task", 1024, NULL, 5, NULL);
 
@@ -54,6 +62,18 @@ int app_initialize(void){
 	return 0;
 }
 
+
+
+
+static void log_system_info(void){
+	LOGI(TAG, "Application startup.");
+	LOGI(TAG, "Project name: %s",   get_project_name());
+	LOGI(TAG, "Build target: %s",   get_build_target());
+	LOGI(TAG, "Target name : %s",   get_target_name());
+	LOGI(TAG, "Target id   : 0x%x", get_cpu_id());
+	LOGI(TAG, "Device id   : 0x%x", get_device_id());
+	LOGI(TAG, "Unique id   : 0x%x%x%x", get_unique_id()[2], get_unique_id()[1], get_unique_id()[0]);
+}
 
 
 #ifdef  USE_FULL_ASSERT

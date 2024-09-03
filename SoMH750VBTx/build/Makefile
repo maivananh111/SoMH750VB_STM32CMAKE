@@ -57,10 +57,10 @@ RM = /home/anh/.espressif/tools/cmake/3.24.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB
+CMAKE_SOURCE_DIR = /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/build
+CMAKE_BINARY_DIR = /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/build/CMakeFiles /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build/CMakeFiles /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VB/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SoMH750VB
+# Target rules for targets named SoMH750VBTx
 
 # Build rule for target.
-SoMH750VB: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SoMH750VB
-.PHONY : SoMH750VB
+SoMH750VBTx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SoMH750VBTx
+.PHONY : SoMH750VBTx
 
 # fast build rule for target.
-SoMH750VB/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/build
-.PHONY : SoMH750VB/fast
+SoMH750VBTx/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/build
+.PHONY : SoMH750VBTx/fast
 
 binary_file_xyz_txt.obj: binary_file_xyz_txt.s.obj
 .PHONY : binary_file_xyz_txt.obj
 
 # target to build an object file
 binary_file_xyz_txt.s.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/binary_file_xyz_txt.s.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/binary_file_xyz_txt.s.obj
 .PHONY : binary_file_xyz_txt.s.obj
 
 main/app_main.obj: main/app_main.c.obj
@@ -142,7 +142,7 @@ main/app_main.obj: main/app_main.c.obj
 
 # target to build an object file
 main/app_main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/main/app_main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/main/app_main.c.obj
 .PHONY : main/app_main.c.obj
 
 main/app_main.i: main/app_main.c.i
@@ -150,7 +150,7 @@ main/app_main.i: main/app_main.c.i
 
 # target to preprocess a source file
 main/app_main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/main/app_main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/main/app_main.c.i
 .PHONY : main/app_main.c.i
 
 main/app_main.s: main/app_main.c.s
@@ -158,15 +158,39 @@ main/app_main.s: main/app_main.c.s
 
 # target to generate assembly for a file
 main/app_main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/main/app_main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/main/app_main.c.s
 .PHONY : main/app_main.c.s
+
+sdk/components/faultanalyzer/faultanalyzer.obj: sdk/components/faultanalyzer/faultanalyzer.c.obj
+.PHONY : sdk/components/faultanalyzer/faultanalyzer.obj
+
+# target to build an object file
+sdk/components/faultanalyzer/faultanalyzer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/faultanalyzer/faultanalyzer.c.obj
+.PHONY : sdk/components/faultanalyzer/faultanalyzer.c.obj
+
+sdk/components/faultanalyzer/faultanalyzer.i: sdk/components/faultanalyzer/faultanalyzer.c.i
+.PHONY : sdk/components/faultanalyzer/faultanalyzer.i
+
+# target to preprocess a source file
+sdk/components/faultanalyzer/faultanalyzer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/faultanalyzer/faultanalyzer.c.i
+.PHONY : sdk/components/faultanalyzer/faultanalyzer.c.i
+
+sdk/components/faultanalyzer/faultanalyzer.s: sdk/components/faultanalyzer/faultanalyzer.c.s
+.PHONY : sdk/components/faultanalyzer/faultanalyzer.s
+
+# target to generate assembly for a file
+sdk/components/faultanalyzer/faultanalyzer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/faultanalyzer/faultanalyzer.c.s
+.PHONY : sdk/components/faultanalyzer/faultanalyzer.c.s
 
 sdk/components/logger/logger.obj: sdk/components/logger/logger.c.obj
 .PHONY : sdk/components/logger/logger.obj
 
 # target to build an object file
 sdk/components/logger/logger.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/components/logger/logger.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/logger/logger.c.obj
 .PHONY : sdk/components/logger/logger.c.obj
 
 sdk/components/logger/logger.i: sdk/components/logger/logger.c.i
@@ -174,7 +198,7 @@ sdk/components/logger/logger.i: sdk/components/logger/logger.c.i
 
 # target to preprocess a source file
 sdk/components/logger/logger.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/components/logger/logger.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/logger/logger.c.i
 .PHONY : sdk/components/logger/logger.c.i
 
 sdk/components/logger/logger.s: sdk/components/logger/logger.c.s
@@ -182,95 +206,119 @@ sdk/components/logger/logger.s: sdk/components/logger/logger.c.s
 
 # target to generate assembly for a file
 sdk/components/logger/logger.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/components/logger/logger.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/logger/logger.c.s
 .PHONY : sdk/components/logger/logger.c.s
 
-sdk/core/mcudev/startup_stm32h750vbtx.obj: sdk/core/mcudev/startup_stm32h750vbtx.s.obj
-.PHONY : sdk/core/mcudev/startup_stm32h750vbtx.obj
+sdk/components/systeminfo/systeminfo.obj: sdk/components/systeminfo/systeminfo.c.obj
+.PHONY : sdk/components/systeminfo/systeminfo.obj
 
 # target to build an object file
-sdk/core/mcudev/startup_stm32h750vbtx.s.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcudev/startup_stm32h750vbtx.s.obj
-.PHONY : sdk/core/mcudev/startup_stm32h750vbtx.s.obj
+sdk/components/systeminfo/systeminfo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/systeminfo/systeminfo.c.obj
+.PHONY : sdk/components/systeminfo/systeminfo.c.obj
 
-sdk/core/mcusys/syscalls.obj: sdk/core/mcusys/syscalls.c.obj
-.PHONY : sdk/core/mcusys/syscalls.obj
-
-# target to build an object file
-sdk/core/mcusys/syscalls.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/syscalls.c.obj
-.PHONY : sdk/core/mcusys/syscalls.c.obj
-
-sdk/core/mcusys/syscalls.i: sdk/core/mcusys/syscalls.c.i
-.PHONY : sdk/core/mcusys/syscalls.i
+sdk/components/systeminfo/systeminfo.i: sdk/components/systeminfo/systeminfo.c.i
+.PHONY : sdk/components/systeminfo/systeminfo.i
 
 # target to preprocess a source file
-sdk/core/mcusys/syscalls.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/syscalls.c.i
-.PHONY : sdk/core/mcusys/syscalls.c.i
+sdk/components/systeminfo/systeminfo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/systeminfo/systeminfo.c.i
+.PHONY : sdk/components/systeminfo/systeminfo.c.i
 
-sdk/core/mcusys/syscalls.s: sdk/core/mcusys/syscalls.c.s
-.PHONY : sdk/core/mcusys/syscalls.s
+sdk/components/systeminfo/systeminfo.s: sdk/components/systeminfo/systeminfo.c.s
+.PHONY : sdk/components/systeminfo/systeminfo.s
 
 # target to generate assembly for a file
-sdk/core/mcusys/syscalls.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/syscalls.c.s
-.PHONY : sdk/core/mcusys/syscalls.c.s
+sdk/components/systeminfo/systeminfo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/components/systeminfo/systeminfo.c.s
+.PHONY : sdk/components/systeminfo/systeminfo.c.s
 
-sdk/core/mcusys/sysmem.obj: sdk/core/mcusys/sysmem.c.obj
-.PHONY : sdk/core/mcusys/sysmem.obj
+sdk/core/mcu/startup_stm32h750vbtx.obj: sdk/core/mcu/startup_stm32h750vbtx.s.obj
+.PHONY : sdk/core/mcu/startup_stm32h750vbtx.obj
 
 # target to build an object file
-sdk/core/mcusys/sysmem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/sysmem.c.obj
-.PHONY : sdk/core/mcusys/sysmem.c.obj
+sdk/core/mcu/startup_stm32h750vbtx.s.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/mcu/startup_stm32h750vbtx.s.obj
+.PHONY : sdk/core/mcu/startup_stm32h750vbtx.s.obj
 
-sdk/core/mcusys/sysmem.i: sdk/core/mcusys/sysmem.c.i
-.PHONY : sdk/core/mcusys/sysmem.i
-
-# target to preprocess a source file
-sdk/core/mcusys/sysmem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/sysmem.c.i
-.PHONY : sdk/core/mcusys/sysmem.c.i
-
-sdk/core/mcusys/sysmem.s: sdk/core/mcusys/sysmem.c.s
-.PHONY : sdk/core/mcusys/sysmem.s
-
-# target to generate assembly for a file
-sdk/core/mcusys/sysmem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/sysmem.c.s
-.PHONY : sdk/core/mcusys/sysmem.c.s
-
-sdk/core/mcusys/system_stm32h7xx.obj: sdk/core/mcusys/system_stm32h7xx.c.obj
-.PHONY : sdk/core/mcusys/system_stm32h7xx.obj
+sdk/core/sysruntime/syscalls.obj: sdk/core/sysruntime/syscalls.c.obj
+.PHONY : sdk/core/sysruntime/syscalls.obj
 
 # target to build an object file
-sdk/core/mcusys/system_stm32h7xx.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/system_stm32h7xx.c.obj
-.PHONY : sdk/core/mcusys/system_stm32h7xx.c.obj
+sdk/core/sysruntime/syscalls.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/syscalls.c.obj
+.PHONY : sdk/core/sysruntime/syscalls.c.obj
 
-sdk/core/mcusys/system_stm32h7xx.i: sdk/core/mcusys/system_stm32h7xx.c.i
-.PHONY : sdk/core/mcusys/system_stm32h7xx.i
+sdk/core/sysruntime/syscalls.i: sdk/core/sysruntime/syscalls.c.i
+.PHONY : sdk/core/sysruntime/syscalls.i
 
 # target to preprocess a source file
-sdk/core/mcusys/system_stm32h7xx.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/system_stm32h7xx.c.i
-.PHONY : sdk/core/mcusys/system_stm32h7xx.c.i
+sdk/core/sysruntime/syscalls.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/syscalls.c.i
+.PHONY : sdk/core/sysruntime/syscalls.c.i
 
-sdk/core/mcusys/system_stm32h7xx.s: sdk/core/mcusys/system_stm32h7xx.c.s
-.PHONY : sdk/core/mcusys/system_stm32h7xx.s
+sdk/core/sysruntime/syscalls.s: sdk/core/sysruntime/syscalls.c.s
+.PHONY : sdk/core/sysruntime/syscalls.s
 
 # target to generate assembly for a file
-sdk/core/mcusys/system_stm32h7xx.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/core/mcusys/system_stm32h7xx.c.s
-.PHONY : sdk/core/mcusys/system_stm32h7xx.c.s
+sdk/core/sysruntime/syscalls.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/syscalls.c.s
+.PHONY : sdk/core/sysruntime/syscalls.c.s
+
+sdk/core/sysruntime/sysmem.obj: sdk/core/sysruntime/sysmem.c.obj
+.PHONY : sdk/core/sysruntime/sysmem.obj
+
+# target to build an object file
+sdk/core/sysruntime/sysmem.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/sysmem.c.obj
+.PHONY : sdk/core/sysruntime/sysmem.c.obj
+
+sdk/core/sysruntime/sysmem.i: sdk/core/sysruntime/sysmem.c.i
+.PHONY : sdk/core/sysruntime/sysmem.i
+
+# target to preprocess a source file
+sdk/core/sysruntime/sysmem.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/sysmem.c.i
+.PHONY : sdk/core/sysruntime/sysmem.c.i
+
+sdk/core/sysruntime/sysmem.s: sdk/core/sysruntime/sysmem.c.s
+.PHONY : sdk/core/sysruntime/sysmem.s
+
+# target to generate assembly for a file
+sdk/core/sysruntime/sysmem.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/sysmem.c.s
+.PHONY : sdk/core/sysruntime/sysmem.c.s
+
+sdk/core/sysruntime/system_stm32h7xx.obj: sdk/core/sysruntime/system_stm32h7xx.c.obj
+.PHONY : sdk/core/sysruntime/system_stm32h7xx.obj
+
+# target to build an object file
+sdk/core/sysruntime/system_stm32h7xx.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/system_stm32h7xx.c.obj
+.PHONY : sdk/core/sysruntime/system_stm32h7xx.c.obj
+
+sdk/core/sysruntime/system_stm32h7xx.i: sdk/core/sysruntime/system_stm32h7xx.c.i
+.PHONY : sdk/core/sysruntime/system_stm32h7xx.i
+
+# target to preprocess a source file
+sdk/core/sysruntime/system_stm32h7xx.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/system_stm32h7xx.c.i
+.PHONY : sdk/core/sysruntime/system_stm32h7xx.c.i
+
+sdk/core/sysruntime/system_stm32h7xx.s: sdk/core/sysruntime/system_stm32h7xx.c.s
+.PHONY : sdk/core/sysruntime/system_stm32h7xx.s
+
+# target to generate assembly for a file
+sdk/core/sysruntime/system_stm32h7xx.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/core/sysruntime/system_stm32h7xx.c.s
+.PHONY : sdk/core/sysruntime/system_stm32h7xx.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal.obj: sdk/drivers/hal/source/stm32h7xx_hal.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal.obj
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal.i: sdk/drivers/hal/source/stm32h7xx_hal.c.i
@@ -278,7 +326,7 @@ sdk/drivers/hal/source/stm32h7xx_hal.i: sdk/drivers/hal/source/stm32h7xx_hal.c.i
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal.s: sdk/drivers/hal/source/stm32h7xx_hal.c.s
@@ -286,7 +334,7 @@ sdk/drivers/hal/source/stm32h7xx_hal.s: sdk/drivers/hal/source/stm32h7xx_hal.c.s
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_cortex.obj: sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.obj
@@ -294,7 +342,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_cortex.obj: sdk/drivers/hal/source/stm32h7x
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_cortex.i: sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.i
@@ -302,7 +350,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_cortex.i: sdk/drivers/hal/source/stm32h7xx_
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_cortex.s: sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.s
@@ -310,7 +358,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_cortex.s: sdk/drivers/hal/source/stm32h7xx_
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_cortex.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_dma.obj: sdk/drivers/hal/source/stm32h7xx_hal_dma.c.obj
@@ -318,7 +366,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_dma.obj: sdk/drivers/hal/source/stm32h7xx_h
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_dma.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_dma.i: sdk/drivers/hal/source/stm32h7xx_hal_dma.c.i
@@ -326,7 +374,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_dma.i: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_dma.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_dma.s: sdk/drivers/hal/source/stm32h7xx_hal_dma.c.s
@@ -334,7 +382,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_dma.s: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_dma.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.obj: sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.obj
@@ -342,7 +390,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.obj: sdk/drivers/hal/source/stm32h7x
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.i: sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.i
@@ -350,7 +398,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.i: sdk/drivers/hal/source/stm32h7xx_
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.s: sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.s
@@ -358,7 +406,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.s: sdk/drivers/hal/source/stm32h7xx_
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_eth.obj: sdk/drivers/hal/source/stm32h7xx_hal_eth.c.obj
@@ -366,7 +414,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_eth.obj: sdk/drivers/hal/source/stm32h7xx_h
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_eth.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_eth.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_eth.i: sdk/drivers/hal/source/stm32h7xx_hal_eth.c.i
@@ -374,7 +422,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_eth.i: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_eth.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_eth.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_eth.s: sdk/drivers/hal/source/stm32h7xx_hal_eth.c.s
@@ -382,7 +430,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_eth.s: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_eth.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_eth.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.obj: sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.obj
@@ -390,7 +438,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.obj: sdk/drivers/hal/source/stm32h7x
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.i: sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.i
@@ -398,7 +446,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.i: sdk/drivers/hal/source/stm32h7xx_
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.s: sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.s
@@ -406,7 +454,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.s: sdk/drivers/hal/source/stm32h7xx_
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_exti.obj: sdk/drivers/hal/source/stm32h7xx_hal_exti.c.obj
@@ -414,7 +462,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_exti.obj: sdk/drivers/hal/source/stm32h7xx_
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_exti.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_exti.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_exti.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_exti.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_exti.i: sdk/drivers/hal/source/stm32h7xx_hal_exti.c.i
@@ -422,7 +470,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_exti.i: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_exti.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_exti.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_exti.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_exti.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_exti.s: sdk/drivers/hal/source/stm32h7xx_hal_exti.c.s
@@ -430,7 +478,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_exti.s: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_exti.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_exti.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_exti.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_exti.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_flash.obj: sdk/drivers/hal/source/stm32h7xx_hal_flash.c.obj
@@ -438,7 +486,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_flash.obj: sdk/drivers/hal/source/stm32h7xx
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_flash.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_flash.i: sdk/drivers/hal/source/stm32h7xx_hal_flash.c.i
@@ -446,7 +494,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_flash.i: sdk/drivers/hal/source/stm32h7xx_h
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_flash.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_flash.s: sdk/drivers/hal/source/stm32h7xx_hal_flash.c.s
@@ -454,7 +502,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_flash.s: sdk/drivers/hal/source/stm32h7xx_h
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_flash.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.obj: sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.obj
@@ -462,7 +510,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.obj: sdk/drivers/hal/source/stm32h
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.i: sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.i
@@ -470,7 +518,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.i: sdk/drivers/hal/source/stm32h7x
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.s: sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.s
@@ -478,7 +526,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.s: sdk/drivers/hal/source/stm32h7x
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_gpio.obj: sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.obj
@@ -486,7 +534,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_gpio.obj: sdk/drivers/hal/source/stm32h7xx_
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_gpio.i: sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.i
@@ -494,7 +542,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_gpio.i: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_gpio.s: sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.s
@@ -502,7 +550,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_gpio.s: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_gpio.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_hsem.obj: sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.obj
@@ -510,7 +558,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_hsem.obj: sdk/drivers/hal/source/stm32h7xx_
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_hsem.i: sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.i
@@ -518,7 +566,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_hsem.i: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_hsem.s: sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.s
@@ -526,7 +574,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_hsem.s: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_hsem.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_i2c.obj: sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.obj
@@ -534,7 +582,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_i2c.obj: sdk/drivers/hal/source/stm32h7xx_h
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_i2c.i: sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.i
@@ -542,7 +590,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_i2c.i: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_i2c.s: sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.s
@@ -550,7 +598,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_i2c.s: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_i2c.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.obj: sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.obj
@@ -558,7 +606,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.obj: sdk/drivers/hal/source/stm32h7x
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.i: sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.i
@@ -566,7 +614,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.i: sdk/drivers/hal/source/stm32h7xx_
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.s: sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.s
@@ -574,7 +622,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.s: sdk/drivers/hal/source/stm32h7xx_
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_i2c_ex.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_mdma.obj: sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.obj
@@ -582,7 +630,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_mdma.obj: sdk/drivers/hal/source/stm32h7xx_
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_mdma.i: sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.i
@@ -590,7 +638,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_mdma.i: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_mdma.s: sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.s
@@ -598,7 +646,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_mdma.s: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_mdma.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_pwr.obj: sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.obj
@@ -606,7 +654,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_pwr.obj: sdk/drivers/hal/source/stm32h7xx_h
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_pwr.i: sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.i
@@ -614,7 +662,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_pwr.i: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_pwr.s: sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.s
@@ -622,7 +670,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_pwr.s: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_pwr.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.obj: sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.obj
@@ -630,7 +678,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.obj: sdk/drivers/hal/source/stm32h7x
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.i: sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.i
@@ -638,7 +686,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.i: sdk/drivers/hal/source/stm32h7xx_
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.s: sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.s
@@ -646,15 +694,39 @@ sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.s: sdk/drivers/hal/source/stm32h7xx_
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.c.s
+
+sdk/drivers/hal/source/stm32h7xx_hal_qspi.obj: sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.obj
+.PHONY : sdk/drivers/hal/source/stm32h7xx_hal_qspi.obj
+
+# target to build an object file
+sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.obj
+.PHONY : sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.obj
+
+sdk/drivers/hal/source/stm32h7xx_hal_qspi.i: sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.i
+.PHONY : sdk/drivers/hal/source/stm32h7xx_hal_qspi.i
+
+# target to preprocess a source file
+sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.i
+.PHONY : sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.i
+
+sdk/drivers/hal/source/stm32h7xx_hal_qspi.s: sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.s
+.PHONY : sdk/drivers/hal/source/stm32h7xx_hal_qspi.s
+
+# target to generate assembly for a file
+sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.s
+.PHONY : sdk/drivers/hal/source/stm32h7xx_hal_qspi.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_rcc.obj: sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_rcc.obj
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_rcc.i: sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.i
@@ -662,7 +734,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_rcc.i: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_rcc.s: sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.s
@@ -670,7 +742,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_rcc.s: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_rcc.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.obj: sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.obj
@@ -678,7 +750,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.obj: sdk/drivers/hal/source/stm32h7x
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.i: sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.i
@@ -686,7 +758,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.i: sdk/drivers/hal/source/stm32h7xx_
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.s: sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.s
@@ -694,7 +766,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.s: sdk/drivers/hal/source/stm32h7xx_
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_rcc_ex.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_tim.obj: sdk/drivers/hal/source/stm32h7xx_hal_tim.c.obj
@@ -702,7 +774,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_tim.obj: sdk/drivers/hal/source/stm32h7xx_h
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_tim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_tim.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_tim.i: sdk/drivers/hal/source/stm32h7xx_hal_tim.c.i
@@ -710,7 +782,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_tim.i: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_tim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_tim.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_tim.s: sdk/drivers/hal/source/stm32h7xx_hal_tim.c.s
@@ -718,7 +790,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_tim.s: sdk/drivers/hal/source/stm32h7xx_hal
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_tim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_tim.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.obj: sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.obj
@@ -726,7 +798,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.obj: sdk/drivers/hal/source/stm32h7x
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.i: sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.i
@@ -734,7 +806,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.i: sdk/drivers/hal/source/stm32h7xx_
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.s: sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.s
@@ -742,7 +814,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.s: sdk/drivers/hal/source/stm32h7xx_
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_tim_ex.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_uart.obj: sdk/drivers/hal/source/stm32h7xx_hal_uart.c.obj
@@ -750,7 +822,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_uart.obj: sdk/drivers/hal/source/stm32h7xx_
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_uart.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_uart.i: sdk/drivers/hal/source/stm32h7xx_hal_uart.c.i
@@ -758,7 +830,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_uart.i: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_uart.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_uart.s: sdk/drivers/hal/source/stm32h7xx_hal_uart.c.s
@@ -766,7 +838,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_uart.s: sdk/drivers/hal/source/stm32h7xx_ha
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_uart.c.s
 
 sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.obj: sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.obj
@@ -774,7 +846,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.obj: sdk/drivers/hal/source/stm32h7
 
 # target to build an object file
 sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.obj
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.obj
 
 sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.i: sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.i
@@ -782,7 +854,7 @@ sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.i: sdk/drivers/hal/source/stm32h7xx
 
 # target to preprocess a source file
 sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.i
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.i
 
 sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.s: sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.s
@@ -790,15 +862,39 @@ sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.s: sdk/drivers/hal/source/stm32h7xx
 
 # target to generate assembly for a file
 sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.s
 .PHONY : sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.c.s
+
+sdk/drivers/periph/source/qspi.obj: sdk/drivers/periph/source/qspi.c.obj
+.PHONY : sdk/drivers/periph/source/qspi.obj
+
+# target to build an object file
+sdk/drivers/periph/source/qspi.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/periph/source/qspi.c.obj
+.PHONY : sdk/drivers/periph/source/qspi.c.obj
+
+sdk/drivers/periph/source/qspi.i: sdk/drivers/periph/source/qspi.c.i
+.PHONY : sdk/drivers/periph/source/qspi.i
+
+# target to preprocess a source file
+sdk/drivers/periph/source/qspi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/periph/source/qspi.c.i
+.PHONY : sdk/drivers/periph/source/qspi.c.i
+
+sdk/drivers/periph/source/qspi.s: sdk/drivers/periph/source/qspi.c.s
+.PHONY : sdk/drivers/periph/source/qspi.s
+
+# target to generate assembly for a file
+sdk/drivers/periph/source/qspi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/drivers/periph/source/qspi.c.s
+.PHONY : sdk/drivers/periph/source/qspi.c.s
 
 sdk/freertos/source/croutine.obj: sdk/freertos/source/croutine.c.obj
 .PHONY : sdk/freertos/source/croutine.obj
 
 # target to build an object file
 sdk/freertos/source/croutine.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/croutine.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/croutine.c.obj
 .PHONY : sdk/freertos/source/croutine.c.obj
 
 sdk/freertos/source/croutine.i: sdk/freertos/source/croutine.c.i
@@ -806,7 +902,7 @@ sdk/freertos/source/croutine.i: sdk/freertos/source/croutine.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/croutine.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/croutine.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/croutine.c.i
 .PHONY : sdk/freertos/source/croutine.c.i
 
 sdk/freertos/source/croutine.s: sdk/freertos/source/croutine.c.s
@@ -814,7 +910,7 @@ sdk/freertos/source/croutine.s: sdk/freertos/source/croutine.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/croutine.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/croutine.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/croutine.c.s
 .PHONY : sdk/freertos/source/croutine.c.s
 
 sdk/freertos/source/event_groups.obj: sdk/freertos/source/event_groups.c.obj
@@ -822,7 +918,7 @@ sdk/freertos/source/event_groups.obj: sdk/freertos/source/event_groups.c.obj
 
 # target to build an object file
 sdk/freertos/source/event_groups.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/event_groups.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/event_groups.c.obj
 .PHONY : sdk/freertos/source/event_groups.c.obj
 
 sdk/freertos/source/event_groups.i: sdk/freertos/source/event_groups.c.i
@@ -830,7 +926,7 @@ sdk/freertos/source/event_groups.i: sdk/freertos/source/event_groups.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/event_groups.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/event_groups.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/event_groups.c.i
 .PHONY : sdk/freertos/source/event_groups.c.i
 
 sdk/freertos/source/event_groups.s: sdk/freertos/source/event_groups.c.s
@@ -838,7 +934,7 @@ sdk/freertos/source/event_groups.s: sdk/freertos/source/event_groups.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/event_groups.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/event_groups.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/event_groups.c.s
 .PHONY : sdk/freertos/source/event_groups.c.s
 
 sdk/freertos/source/heap_4.obj: sdk/freertos/source/heap_4.c.obj
@@ -846,7 +942,7 @@ sdk/freertos/source/heap_4.obj: sdk/freertos/source/heap_4.c.obj
 
 # target to build an object file
 sdk/freertos/source/heap_4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/heap_4.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/heap_4.c.obj
 .PHONY : sdk/freertos/source/heap_4.c.obj
 
 sdk/freertos/source/heap_4.i: sdk/freertos/source/heap_4.c.i
@@ -854,7 +950,7 @@ sdk/freertos/source/heap_4.i: sdk/freertos/source/heap_4.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/heap_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/heap_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/heap_4.c.i
 .PHONY : sdk/freertos/source/heap_4.c.i
 
 sdk/freertos/source/heap_4.s: sdk/freertos/source/heap_4.c.s
@@ -862,7 +958,7 @@ sdk/freertos/source/heap_4.s: sdk/freertos/source/heap_4.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/heap_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/heap_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/heap_4.c.s
 .PHONY : sdk/freertos/source/heap_4.c.s
 
 sdk/freertos/source/list.obj: sdk/freertos/source/list.c.obj
@@ -870,7 +966,7 @@ sdk/freertos/source/list.obj: sdk/freertos/source/list.c.obj
 
 # target to build an object file
 sdk/freertos/source/list.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/list.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/list.c.obj
 .PHONY : sdk/freertos/source/list.c.obj
 
 sdk/freertos/source/list.i: sdk/freertos/source/list.c.i
@@ -878,7 +974,7 @@ sdk/freertos/source/list.i: sdk/freertos/source/list.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/list.c.i
 .PHONY : sdk/freertos/source/list.c.i
 
 sdk/freertos/source/list.s: sdk/freertos/source/list.c.s
@@ -886,7 +982,7 @@ sdk/freertos/source/list.s: sdk/freertos/source/list.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/list.c.s
 .PHONY : sdk/freertos/source/list.c.s
 
 sdk/freertos/source/port.obj: sdk/freertos/source/port.c.obj
@@ -894,7 +990,7 @@ sdk/freertos/source/port.obj: sdk/freertos/source/port.c.obj
 
 # target to build an object file
 sdk/freertos/source/port.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/port.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/port.c.obj
 .PHONY : sdk/freertos/source/port.c.obj
 
 sdk/freertos/source/port.i: sdk/freertos/source/port.c.i
@@ -902,7 +998,7 @@ sdk/freertos/source/port.i: sdk/freertos/source/port.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/port.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/port.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/port.c.i
 .PHONY : sdk/freertos/source/port.c.i
 
 sdk/freertos/source/port.s: sdk/freertos/source/port.c.s
@@ -910,7 +1006,7 @@ sdk/freertos/source/port.s: sdk/freertos/source/port.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/port.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/port.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/port.c.s
 .PHONY : sdk/freertos/source/port.c.s
 
 sdk/freertos/source/queue.obj: sdk/freertos/source/queue.c.obj
@@ -918,7 +1014,7 @@ sdk/freertos/source/queue.obj: sdk/freertos/source/queue.c.obj
 
 # target to build an object file
 sdk/freertos/source/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/queue.c.obj
 .PHONY : sdk/freertos/source/queue.c.obj
 
 sdk/freertos/source/queue.i: sdk/freertos/source/queue.c.i
@@ -926,7 +1022,7 @@ sdk/freertos/source/queue.i: sdk/freertos/source/queue.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/queue.c.i
 .PHONY : sdk/freertos/source/queue.c.i
 
 sdk/freertos/source/queue.s: sdk/freertos/source/queue.c.s
@@ -934,7 +1030,7 @@ sdk/freertos/source/queue.s: sdk/freertos/source/queue.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/queue.c.s
 .PHONY : sdk/freertos/source/queue.c.s
 
 sdk/freertos/source/stream_buffer.obj: sdk/freertos/source/stream_buffer.c.obj
@@ -942,7 +1038,7 @@ sdk/freertos/source/stream_buffer.obj: sdk/freertos/source/stream_buffer.c.obj
 
 # target to build an object file
 sdk/freertos/source/stream_buffer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/stream_buffer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/stream_buffer.c.obj
 .PHONY : sdk/freertos/source/stream_buffer.c.obj
 
 sdk/freertos/source/stream_buffer.i: sdk/freertos/source/stream_buffer.c.i
@@ -950,7 +1046,7 @@ sdk/freertos/source/stream_buffer.i: sdk/freertos/source/stream_buffer.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/stream_buffer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/stream_buffer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/stream_buffer.c.i
 .PHONY : sdk/freertos/source/stream_buffer.c.i
 
 sdk/freertos/source/stream_buffer.s: sdk/freertos/source/stream_buffer.c.s
@@ -958,7 +1054,7 @@ sdk/freertos/source/stream_buffer.s: sdk/freertos/source/stream_buffer.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/stream_buffer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/stream_buffer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/stream_buffer.c.s
 .PHONY : sdk/freertos/source/stream_buffer.c.s
 
 sdk/freertos/source/tasks.obj: sdk/freertos/source/tasks.c.obj
@@ -966,7 +1062,7 @@ sdk/freertos/source/tasks.obj: sdk/freertos/source/tasks.c.obj
 
 # target to build an object file
 sdk/freertos/source/tasks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/tasks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/tasks.c.obj
 .PHONY : sdk/freertos/source/tasks.c.obj
 
 sdk/freertos/source/tasks.i: sdk/freertos/source/tasks.c.i
@@ -974,7 +1070,7 @@ sdk/freertos/source/tasks.i: sdk/freertos/source/tasks.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/tasks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/tasks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/tasks.c.i
 .PHONY : sdk/freertos/source/tasks.c.i
 
 sdk/freertos/source/tasks.s: sdk/freertos/source/tasks.c.s
@@ -982,7 +1078,7 @@ sdk/freertos/source/tasks.s: sdk/freertos/source/tasks.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/tasks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/tasks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/tasks.c.s
 .PHONY : sdk/freertos/source/tasks.c.s
 
 sdk/freertos/source/timers.obj: sdk/freertos/source/timers.c.obj
@@ -990,7 +1086,7 @@ sdk/freertos/source/timers.obj: sdk/freertos/source/timers.c.obj
 
 # target to build an object file
 sdk/freertos/source/timers.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/timers.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/timers.c.obj
 .PHONY : sdk/freertos/source/timers.c.obj
 
 sdk/freertos/source/timers.i: sdk/freertos/source/timers.c.i
@@ -998,7 +1094,7 @@ sdk/freertos/source/timers.i: sdk/freertos/source/timers.c.i
 
 # target to preprocess a source file
 sdk/freertos/source/timers.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/timers.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/timers.c.i
 .PHONY : sdk/freertos/source/timers.c.i
 
 sdk/freertos/source/timers.s: sdk/freertos/source/timers.c.s
@@ -1006,7 +1102,7 @@ sdk/freertos/source/timers.s: sdk/freertos/source/timers.c.s
 
 # target to generate assembly for a file
 sdk/freertos/source/timers.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/freertos/source/timers.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/freertos/source/timers.c.s
 .PHONY : sdk/freertos/source/timers.c.s
 
 sdk/startup/app_hw_init.obj: sdk/startup/app_hw_init.c.obj
@@ -1014,7 +1110,7 @@ sdk/startup/app_hw_init.obj: sdk/startup/app_hw_init.c.obj
 
 # target to build an object file
 sdk/startup/app_hw_init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_hw_init.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_hw_init.c.obj
 .PHONY : sdk/startup/app_hw_init.c.obj
 
 sdk/startup/app_hw_init.i: sdk/startup/app_hw_init.c.i
@@ -1022,7 +1118,7 @@ sdk/startup/app_hw_init.i: sdk/startup/app_hw_init.c.i
 
 # target to preprocess a source file
 sdk/startup/app_hw_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_hw_init.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_hw_init.c.i
 .PHONY : sdk/startup/app_hw_init.c.i
 
 sdk/startup/app_hw_init.s: sdk/startup/app_hw_init.c.s
@@ -1030,7 +1126,7 @@ sdk/startup/app_hw_init.s: sdk/startup/app_hw_init.c.s
 
 # target to generate assembly for a file
 sdk/startup/app_hw_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_hw_init.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_hw_init.c.s
 .PHONY : sdk/startup/app_hw_init.c.s
 
 sdk/startup/app_hw_mspinit.obj: sdk/startup/app_hw_mspinit.c.obj
@@ -1038,7 +1134,7 @@ sdk/startup/app_hw_mspinit.obj: sdk/startup/app_hw_mspinit.c.obj
 
 # target to build an object file
 sdk/startup/app_hw_mspinit.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_hw_mspinit.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_hw_mspinit.c.obj
 .PHONY : sdk/startup/app_hw_mspinit.c.obj
 
 sdk/startup/app_hw_mspinit.i: sdk/startup/app_hw_mspinit.c.i
@@ -1046,7 +1142,7 @@ sdk/startup/app_hw_mspinit.i: sdk/startup/app_hw_mspinit.c.i
 
 # target to preprocess a source file
 sdk/startup/app_hw_mspinit.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_hw_mspinit.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_hw_mspinit.c.i
 .PHONY : sdk/startup/app_hw_mspinit.c.i
 
 sdk/startup/app_hw_mspinit.s: sdk/startup/app_hw_mspinit.c.s
@@ -1054,7 +1150,7 @@ sdk/startup/app_hw_mspinit.s: sdk/startup/app_hw_mspinit.c.s
 
 # target to generate assembly for a file
 sdk/startup/app_hw_mspinit.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_hw_mspinit.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_hw_mspinit.c.s
 .PHONY : sdk/startup/app_hw_mspinit.c.s
 
 sdk/startup/app_init.obj: sdk/startup/app_init.c.obj
@@ -1062,7 +1158,7 @@ sdk/startup/app_init.obj: sdk/startup/app_init.c.obj
 
 # target to build an object file
 sdk/startup/app_init.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_init.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_init.c.obj
 .PHONY : sdk/startup/app_init.c.obj
 
 sdk/startup/app_init.i: sdk/startup/app_init.c.i
@@ -1070,7 +1166,7 @@ sdk/startup/app_init.i: sdk/startup/app_init.c.i
 
 # target to preprocess a source file
 sdk/startup/app_init.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_init.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_init.c.i
 .PHONY : sdk/startup/app_init.c.i
 
 sdk/startup/app_init.s: sdk/startup/app_init.c.s
@@ -1078,7 +1174,7 @@ sdk/startup/app_init.s: sdk/startup/app_init.c.s
 
 # target to generate assembly for a file
 sdk/startup/app_init.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/startup/app_init.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_init.c.s
 .PHONY : sdk/startup/app_init.c.s
 
 sdk/system/interrupts/interrupts.obj: sdk/system/interrupts/interrupts.c.obj
@@ -1086,7 +1182,7 @@ sdk/system/interrupts/interrupts.obj: sdk/system/interrupts/interrupts.c.obj
 
 # target to build an object file
 sdk/system/interrupts/interrupts.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/interrupts/interrupts.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/interrupts/interrupts.c.obj
 .PHONY : sdk/system/interrupts/interrupts.c.obj
 
 sdk/system/interrupts/interrupts.i: sdk/system/interrupts/interrupts.c.i
@@ -1094,7 +1190,7 @@ sdk/system/interrupts/interrupts.i: sdk/system/interrupts/interrupts.c.i
 
 # target to preprocess a source file
 sdk/system/interrupts/interrupts.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/interrupts/interrupts.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/interrupts/interrupts.c.i
 .PHONY : sdk/system/interrupts/interrupts.c.i
 
 sdk/system/interrupts/interrupts.s: sdk/system/interrupts/interrupts.c.s
@@ -1102,7 +1198,7 @@ sdk/system/interrupts/interrupts.s: sdk/system/interrupts/interrupts.c.s
 
 # target to generate assembly for a file
 sdk/system/interrupts/interrupts.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/interrupts/interrupts.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/interrupts/interrupts.c.s
 .PHONY : sdk/system/interrupts/interrupts.c.s
 
 sdk/system/ports/port_freertos.obj: sdk/system/ports/port_freertos.c.obj
@@ -1110,7 +1206,7 @@ sdk/system/ports/port_freertos.obj: sdk/system/ports/port_freertos.c.obj
 
 # target to build an object file
 sdk/system/ports/port_freertos.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/ports/port_freertos.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/ports/port_freertos.c.obj
 .PHONY : sdk/system/ports/port_freertos.c.obj
 
 sdk/system/ports/port_freertos.i: sdk/system/ports/port_freertos.c.i
@@ -1118,7 +1214,7 @@ sdk/system/ports/port_freertos.i: sdk/system/ports/port_freertos.c.i
 
 # target to preprocess a source file
 sdk/system/ports/port_freertos.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/ports/port_freertos.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/ports/port_freertos.c.i
 .PHONY : sdk/system/ports/port_freertos.c.i
 
 sdk/system/ports/port_freertos.s: sdk/system/ports/port_freertos.c.s
@@ -1126,7 +1222,7 @@ sdk/system/ports/port_freertos.s: sdk/system/ports/port_freertos.c.s
 
 # target to generate assembly for a file
 sdk/system/ports/port_freertos.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/ports/port_freertos.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/ports/port_freertos.c.s
 .PHONY : sdk/system/ports/port_freertos.c.s
 
 sdk/system/ports/port_logger.obj: sdk/system/ports/port_logger.c.obj
@@ -1134,7 +1230,7 @@ sdk/system/ports/port_logger.obj: sdk/system/ports/port_logger.c.obj
 
 # target to build an object file
 sdk/system/ports/port_logger.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/ports/port_logger.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/ports/port_logger.c.obj
 .PHONY : sdk/system/ports/port_logger.c.obj
 
 sdk/system/ports/port_logger.i: sdk/system/ports/port_logger.c.i
@@ -1142,7 +1238,7 @@ sdk/system/ports/port_logger.i: sdk/system/ports/port_logger.c.i
 
 # target to preprocess a source file
 sdk/system/ports/port_logger.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/ports/port_logger.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/ports/port_logger.c.i
 .PHONY : sdk/system/ports/port_logger.c.i
 
 sdk/system/ports/port_logger.s: sdk/system/ports/port_logger.c.s
@@ -1150,7 +1246,7 @@ sdk/system/ports/port_logger.s: sdk/system/ports/port_logger.c.s
 
 # target to generate assembly for a file
 sdk/system/ports/port_logger.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VB.dir/build.make CMakeFiles/SoMH750VB.dir/sdk/system/ports/port_logger.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SoMH750VBTx.dir/build.make CMakeFiles/SoMH750VBTx.dir/sdk/system/ports/port_logger.c.s
 .PHONY : sdk/system/ports/port_logger.c.s
 
 # Help Target
@@ -1161,24 +1257,30 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SoMH750VB"
+	@echo "... SoMH750VBTx"
 	@echo "... binary_file_xyz_txt.obj"
 	@echo "... main/app_main.obj"
 	@echo "... main/app_main.i"
 	@echo "... main/app_main.s"
+	@echo "... sdk/components/faultanalyzer/faultanalyzer.obj"
+	@echo "... sdk/components/faultanalyzer/faultanalyzer.i"
+	@echo "... sdk/components/faultanalyzer/faultanalyzer.s"
 	@echo "... sdk/components/logger/logger.obj"
 	@echo "... sdk/components/logger/logger.i"
 	@echo "... sdk/components/logger/logger.s"
-	@echo "... sdk/core/mcudev/startup_stm32h750vbtx.obj"
-	@echo "... sdk/core/mcusys/syscalls.obj"
-	@echo "... sdk/core/mcusys/syscalls.i"
-	@echo "... sdk/core/mcusys/syscalls.s"
-	@echo "... sdk/core/mcusys/sysmem.obj"
-	@echo "... sdk/core/mcusys/sysmem.i"
-	@echo "... sdk/core/mcusys/sysmem.s"
-	@echo "... sdk/core/mcusys/system_stm32h7xx.obj"
-	@echo "... sdk/core/mcusys/system_stm32h7xx.i"
-	@echo "... sdk/core/mcusys/system_stm32h7xx.s"
+	@echo "... sdk/components/systeminfo/systeminfo.obj"
+	@echo "... sdk/components/systeminfo/systeminfo.i"
+	@echo "... sdk/components/systeminfo/systeminfo.s"
+	@echo "... sdk/core/mcu/startup_stm32h750vbtx.obj"
+	@echo "... sdk/core/sysruntime/syscalls.obj"
+	@echo "... sdk/core/sysruntime/syscalls.i"
+	@echo "... sdk/core/sysruntime/syscalls.s"
+	@echo "... sdk/core/sysruntime/sysmem.obj"
+	@echo "... sdk/core/sysruntime/sysmem.i"
+	@echo "... sdk/core/sysruntime/sysmem.s"
+	@echo "... sdk/core/sysruntime/system_stm32h7xx.obj"
+	@echo "... sdk/core/sysruntime/system_stm32h7xx.i"
+	@echo "... sdk/core/sysruntime/system_stm32h7xx.s"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal.obj"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal.i"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal.s"
@@ -1227,6 +1329,9 @@ help:
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.obj"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.i"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_pwr_ex.s"
+	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_qspi.obj"
+	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_qspi.i"
+	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_qspi.s"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_rcc.obj"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_rcc.i"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_rcc.s"
@@ -1245,6 +1350,9 @@ help:
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.obj"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.i"
 	@echo "... sdk/drivers/hal/source/stm32h7xx_hal_uart_ex.s"
+	@echo "... sdk/drivers/periph/source/qspi.obj"
+	@echo "... sdk/drivers/periph/source/qspi.i"
+	@echo "... sdk/drivers/periph/source/qspi.s"
 	@echo "... sdk/freertos/source/croutine.obj"
 	@echo "... sdk/freertos/source/croutine.i"
 	@echo "... sdk/freertos/source/croutine.s"

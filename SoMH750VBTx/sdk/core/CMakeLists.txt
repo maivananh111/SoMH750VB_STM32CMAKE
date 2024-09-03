@@ -9,14 +9,14 @@ enable_language(C CXX ASM)
 
 target_include_directories(${CORE_NAME} INTERFACE
 	cpu
-	mcudev
-	mcusys
+	mcu
+	sysruntime
 )
 target_sources(${CORE_NAME} INTERFACE
-	mcudev/startup_stm32h750vbtx.s
+	mcu/startup_stm32h750vbtx.s
 
-	mcusys/system_stm32h7xx.c
-    mcusys/sysmem.c
-    mcusys/syscalls.c
+	sysruntime/system_stm32h7xx.c
+    sysruntime/sysmem.c
+    sysruntime/syscalls.c
 )
 target_link_directories(${CORE_NAME} INTERFACE)

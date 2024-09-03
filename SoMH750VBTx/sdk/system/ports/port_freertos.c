@@ -5,6 +5,9 @@
  *      Author: anh
  */
 #include "port_freertos.h"
+#include "logger.h"
+
+
 
 
 void vApplicationIdleHook(void){
@@ -13,11 +16,11 @@ void vApplicationIdleHook(void){
 
 void vApplicationStackOverflowHook(TaskHandle_t xTask, signed char *pcTaskName){
 	(void)xTask;
-	(void)pcTaskName;
+	LOGE("RTOS", "Task %s stack overflow", pcTaskName);
 }
 
 void vApplicationMallocFailedHook(void){
-
+	LOGE("RTOS", "Memory allocation failed");
 }
 
 #if (configSUPPORT_STATIC_ALLOCATION == 1)

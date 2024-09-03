@@ -8,7 +8,6 @@ add_library(${SYSTEM_NAME} INTERFACE)
 enable_language(C CXX ASM)
 target_include_directories(${SYSTEM_NAME} INTERFACE
     interrupts
-    
     ports
 )
 target_sources(${SYSTEM_NAME} INTERFACE
@@ -21,4 +20,5 @@ target_link_directories(${SYSTEM_NAME} INTERFACE)
 target_link_libraries(${SYSTEM_NAME} INTERFACE
 	freertos
 	driver_hal
+	faultanalyzer
 )

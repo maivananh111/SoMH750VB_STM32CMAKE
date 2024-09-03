@@ -13,7 +13,7 @@ extern "C"{
 #endif
 
 #include "stdint.h"
-#include "macro.h"
+#include "macros.h"
 
 typedef enum{
 	ERR_NONE                = 0x00,   /*!< No error */
