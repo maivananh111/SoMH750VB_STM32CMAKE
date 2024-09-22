@@ -1,12 +1,12 @@
 /*
- * error_check.h
+ * error_type.h
  *
  *  Created on: Oct 12, 2022
  *      Author: anh
  */
 
-#ifndef SDK_COMMON_ERROR_CHECK_H_
-#define SDK_COMMON_ERROR_CHECK_H_
+#ifndef SDK_COMMON_ERROR_TYPE_H_
+#define SDK_COMMON_ERROR_TYPE_H_
 
 #ifdef __cplusplus
 extern "C"{
@@ -69,4 +69,4 @@ typedef struct {
 }
 #endif
 
-#endif /* SDK_COMMON_ERROR_CHECK_H_ */
+#endif /* SDK_COMMON_ERROR_TYPE_H_ */

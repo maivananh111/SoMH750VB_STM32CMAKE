@@ -19,6 +19,8 @@ extern "C"{
 
 extern UART_HandleTypeDef huart8;
 
+extern void Error_Handler(void);
+
 void SystemClock_Config(void);
 void MPU_Config(void);
 void MX_GPIO_Init(void);

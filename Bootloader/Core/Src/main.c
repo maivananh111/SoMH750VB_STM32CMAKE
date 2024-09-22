@@ -141,6 +141,7 @@ int main(void) {
 								       strlen("\r\n---------------------- END OF BOOTLOADER ----------------------\r\n\r\n"), 1000);
 //	HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
 
+//	HAL_QSPI_Abort(&hqspi);
 	SCB_DisableDCache();
 	SCB_DisableICache();
 	SysTick->CTRL = 0;

@@ -1,32 +1,32 @@
 CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_init.c.obj: \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/startup/app_init.c \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build/config.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/string.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/_ansi.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/newlib.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/_newlib_version.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/config.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/machine/ieeefp.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/features.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/reent.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/_ansi.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/lib/gcc/arm-none-eabi/12.3.1/include/stddef.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_types.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/machine/_types.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/machine/_default_types.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/lock.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/cdefs.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_locale.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/strings.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/string.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/string.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/_ansi.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/newlib.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/_newlib_version.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/config.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/machine/ieeefp.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/features.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/reent.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/_ansi.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/lib/gcc/arm-none-eabi/12.3.1/include/stddef.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_types.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/machine/_types.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/machine/_default_types.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/lock.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/cdefs.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_locale.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/strings.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/string.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/startup/app_hw_init.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/core/mcu/stm32h7xx.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/core/mcu/../mcu/stm32h750xx.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/core/cpu/core_cm7.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/lib/gcc/arm-none-eabi/12.3.1/include/stdint.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/stdint.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_intsup.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_stdint.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/lib/gcc/arm-none-eabi/12.3.1/include/stdint.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/stdint.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_intsup.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_stdint.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/core/cpu/cmsis_version.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/core/cpu/cmsis_compiler.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/core/cpu/cmsis_gcc.h \
@@ -37,7 +37,7 @@ CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_init.c.obj: \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_rcc.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_def.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/Legacy/stm32_hal_legacy.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/math.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/math.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_rcc_ex.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_gpio.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_gpio_ex.h \
@@ -69,6 +69,6 @@ CMakeFiles/SoMH750VBTx.dir/sdk/startup/app_init.c.obj: \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/freertos/include/freertos/task.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/freertos/include/freertos/list.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/components/logger/./logger.h \
- /home/anh/ProgramFiles/stm32cube/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/lib/gcc/arm-none-eabi/12.3.1/include/stdbool.h \
+ /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/lib/gcc/arm-none-eabi/12.3.1/include/stdbool.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/components/faultanalyzer/./faultanalyzer.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/components/systeminfo/./systeminfo.h

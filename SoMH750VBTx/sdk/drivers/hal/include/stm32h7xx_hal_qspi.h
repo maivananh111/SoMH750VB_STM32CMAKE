@@ -555,7 +555,11 @@ typedef void (*pQSPI_CallbackTypeDef)(QSPI_HandleTypeDef *hqspi);
 /** @addtogroup QSPI_Exported_Functions_Group1
   * @{
   */
-
+/* Initialization/de-initialization functions  ********************************/
+HAL_StatusTypeDef     HAL_QSPI_Init     (QSPI_HandleTypeDef *hqspi);
+HAL_StatusTypeDef     HAL_QSPI_DeInit   (QSPI_HandleTypeDef *hqspi);
+void                  HAL_QSPI_MspInit  (QSPI_HandleTypeDef *hqspi);
+void                  HAL_QSPI_MspDeInit(QSPI_HandleTypeDef *hqspi);
 /**
   * @}
   */
@@ -564,18 +568,47 @@ typedef void (*pQSPI_CallbackTypeDef)(QSPI_HandleTypeDef *hqspi);
   * @{
   */
 /* IO operation functions *****************************************************/
+/* QSPI IRQ handler method */
+void                  HAL_QSPI_IRQHandler(QSPI_HandleTypeDef *hqspi);
 
 /* QSPI indirect mode */
-HAL_StatusTypeDef     HAL_QSPI_Command      (QSPI_HandleTypeDef *hqspi, QSPI_CommandTypeDef *cmd, uint32_t Timeout) __attribute__((section(".ram_d3_section")));
-HAL_StatusTypeDef     HAL_QSPI_Transmit     (QSPI_HandleTypeDef *hqspi, uint8_t *pData, uint32_t Timeout) __attribute__((section(".ram_d3_section")));
-HAL_StatusTypeDef     HAL_QSPI_Receive      (QSPI_HandleTypeDef *hqspi, uint8_t *pData, uint32_t Timeout) __attribute__((section(".ram_d3_section")));
+HAL_StatusTypeDef     HAL_QSPI_Command      (QSPI_HandleTypeDef *hqspi, QSPI_CommandTypeDef *cmd, uint32_t Timeout);
+HAL_StatusTypeDef     HAL_QSPI_Transmit     (QSPI_HandleTypeDef *hqspi, uint8_t *pData, uint32_t Timeout);
+HAL_StatusTypeDef     HAL_QSPI_Receive      (QSPI_HandleTypeDef *hqspi, uint8_t *pData, uint32_t Timeout);
+HAL_StatusTypeDef     HAL_QSPI_Command_IT   (QSPI_HandleTypeDef *hqspi, QSPI_CommandTypeDef *cmd);
+HAL_StatusTypeDef     HAL_QSPI_Transmit_IT  (QSPI_HandleTypeDef *hqspi, uint8_t *pData);
+HAL_StatusTypeDef     HAL_QSPI_Receive_IT   (QSPI_HandleTypeDef *hqspi, uint8_t *pData);
+HAL_StatusTypeDef     HAL_QSPI_Transmit_DMA (QSPI_HandleTypeDef *hqspi, uint8_t *pData);
+HAL_StatusTypeDef     HAL_QSPI_Receive_DMA  (QSPI_HandleTypeDef *hqspi, uint8_t *pData);
 
 /* QSPI status flag polling mode */
-HAL_StatusTypeDef     HAL_QSPI_AutoPolling   (QSPI_HandleTypeDef *hqspi, QSPI_CommandTypeDef *cmd, QSPI_AutoPollingTypeDef *cfg, uint32_t Timeout) __attribute__((section(".ram_d3_section")));
+HAL_StatusTypeDef     HAL_QSPI_AutoPolling   (QSPI_HandleTypeDef *hqspi, QSPI_CommandTypeDef *cmd, QSPI_AutoPollingTypeDef *cfg, uint32_t Timeout);
+HAL_StatusTypeDef     HAL_QSPI_AutoPolling_IT(QSPI_HandleTypeDef *hqspi, QSPI_CommandTypeDef *cmd, QSPI_AutoPollingTypeDef *cfg);
 
 /* QSPI memory-mapped mode */
-HAL_StatusTypeDef     HAL_QSPI_MemoryMapped(QSPI_HandleTypeDef *hqspi, QSPI_CommandTypeDef *cmd, QSPI_MemoryMappedTypeDef *cfg) __attribute__((section(".ram_d3_section")));
+HAL_StatusTypeDef     HAL_QSPI_MemoryMapped(QSPI_HandleTypeDef *hqspi, QSPI_CommandTypeDef *cmd, QSPI_MemoryMappedTypeDef *cfg);
 
+/* Callback functions in non-blocking modes ***********************************/
+void                  HAL_QSPI_ErrorCallback        (QSPI_HandleTypeDef *hqspi);
+void                  HAL_QSPI_AbortCpltCallback    (QSPI_HandleTypeDef *hqspi);
+void                  HAL_QSPI_FifoThresholdCallback(QSPI_HandleTypeDef *hqspi);
+
+/* QSPI indirect mode */
+void                  HAL_QSPI_CmdCpltCallback      (QSPI_HandleTypeDef *hqspi);
+void                  HAL_QSPI_RxCpltCallback       (QSPI_HandleTypeDef *hqspi);
+void                  HAL_QSPI_TxCpltCallback       (QSPI_HandleTypeDef *hqspi);
+
+/* QSPI status flag polling mode */
+void                  HAL_QSPI_StatusMatchCallback  (QSPI_HandleTypeDef *hqspi);
+
+/* QSPI memory-mapped mode */
+void                  HAL_QSPI_TimeOutCallback      (QSPI_HandleTypeDef *hqspi);
+
+#if (USE_HAL_QSPI_REGISTER_CALLBACKS == 1)
+/* QSPI callback registering/unregistering */
+HAL_StatusTypeDef     HAL_QSPI_RegisterCallback     (QSPI_HandleTypeDef *hqspi, HAL_QSPI_CallbackIDTypeDef CallbackId, pQSPI_CallbackTypeDef pCallback);
+HAL_StatusTypeDef     HAL_QSPI_UnRegisterCallback   (QSPI_HandleTypeDef *hqspi, HAL_QSPI_CallbackIDTypeDef CallbackId);
+#endif
 /**
   * @}
   */
@@ -584,13 +617,14 @@ HAL_StatusTypeDef     HAL_QSPI_MemoryMapped(QSPI_HandleTypeDef *hqspi, QSPI_Comm
   * @{
   */
 /* Peripheral Control and State functions  ************************************/
-HAL_QSPI_StateTypeDef HAL_QSPI_GetState        (QSPI_HandleTypeDef *hqspi) __attribute__((section(".ram_d3_section")));
-uint32_t              HAL_QSPI_GetError        (QSPI_HandleTypeDef *hqspi) __attribute__((section(".ram_d3_section")));
-HAL_StatusTypeDef     HAL_QSPI_Abort           (QSPI_HandleTypeDef *hqspi) __attribute__((section(".ram_d3_section")));
-void                  HAL_QSPI_SetTimeout      (QSPI_HandleTypeDef *hqspi, uint32_t Timeout) __attribute__((section(".ram_d3_section")));
-HAL_StatusTypeDef     HAL_QSPI_SetFifoThreshold(QSPI_HandleTypeDef *hqspi, uint32_t Threshold) __attribute__((section(".ram_d3_section")));
-uint32_t              HAL_QSPI_GetFifoThreshold(QSPI_HandleTypeDef *hqspi) __attribute__((section(".ram_d3_section")));
-HAL_StatusTypeDef     HAL_QSPI_SetFlashID      (QSPI_HandleTypeDef *hqspi, uint32_t FlashID) __attribute__((section(".ram_d3_section")));
+HAL_QSPI_StateTypeDef HAL_QSPI_GetState        (QSPI_HandleTypeDef *hqspi);
+uint32_t              HAL_QSPI_GetError        (QSPI_HandleTypeDef *hqspi);
+HAL_StatusTypeDef     HAL_QSPI_Abort           (QSPI_HandleTypeDef *hqspi);
+HAL_StatusTypeDef     HAL_QSPI_Abort_IT        (QSPI_HandleTypeDef *hqspi);
+void                  HAL_QSPI_SetTimeout      (QSPI_HandleTypeDef *hqspi, uint32_t Timeout);
+HAL_StatusTypeDef     HAL_QSPI_SetFifoThreshold(QSPI_HandleTypeDef *hqspi, uint32_t Threshold);
+uint32_t              HAL_QSPI_GetFifoThreshold(QSPI_HandleTypeDef *hqspi);
+HAL_StatusTypeDef     HAL_QSPI_SetFlashID      (QSPI_HandleTypeDef *hqspi, uint32_t FlashID);
 /**
   * @}
   */

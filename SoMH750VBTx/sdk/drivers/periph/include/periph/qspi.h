@@ -8,9 +8,8 @@
 #ifndef SDK_DRIVERS_PERIPH__QSPI_H_
 #define SDK_DRIVERS_PERIPH__QSPI_H_
 
-
 #include "stm32h7xx_hal.h"
-
+extern QSPI_HandleTypeDef hqspi;
 
 
 /*XM25QH64C memory parameters*/
@@ -18,8 +17,6 @@
 #define MEMORY_SECTOR_SIZE              0x1000    /* 4kBytes */
 #define MEMORY_SECTOR_NUM 				0x800     /* 128*16 sector */
 #define MEMORY_PAGE_SIZE                0x100     /* 256 bytes */
-
-
 
 /*XM25QH64C  commands */
 #define RESET_ENABLE_CMD  0x66//
@@ -51,10 +48,28 @@
 
 
 
-uint8_t qspi_erase_sector(uint32_t start_address, uint32_t end_address) __attribute__((section(".ram_d3_section")));
-uint8_t qspi_write_memory(uint32_t address, uint8_t *buffer, uint32_t buffer_size) __attribute__((section(".ram_d3_section")));
+
+typedef struct{
+	uint16_t commid;
+	uint8_t mfid;
+	uint8_t devid;
+	char mf[10];
+	uint32_t sizekb;
+} qspi_flash_info_t;
+
+
+uint8_t qspi_init(void);
+uint8_t qspi_deinit(void);
+
+uint8_t qspi_read_info(qspi_flash_info_t *pinfo);
+
+uint8_t qspi_erase_sector(uint32_t saddress, uint32_t eaddress) __attribute__((section(".ram_d3_section")));
+uint8_t qspi_write_memory(uint32_t waddress, uint8_t *wbuffer, uint32_t wsize) __attribute__((section(".ram_d3_section")));
+uint8_t qspi_read_memmory(uint32_t raddress, uint8_t *rbuffer, uint32_t rsize);
+
 uint8_t qspi_enter_memory_mapped_mode(void) __attribute__((section(".ram_d3_section")));
 uint8_t qspi_exit_memory_mapped_mode(void) __attribute__((section(".ram_d3_section")));
+
 uint8_t qspi_erase_chip(void) __attribute__((section(".ram_d3_section")));
 
 
