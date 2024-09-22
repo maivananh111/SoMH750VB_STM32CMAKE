@@ -10,7 +10,7 @@
 				<language-scope id="org.eclipse.cdt.core.g++"/>
 			</provider>
 			<provider copy-of="extension" id="org.eclipse.cdt.managedbuilder.core.GCCBuildCommandParser"/>
-			<provider build-parser-id="org.eclipse.cdt.managedbuilder.core.GCCBuildCommandParser" cdb-modified-time="1727011890552" cdb-path="/home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build/compile_commands.json" class="org.eclipse.cdt.managedbuilder.internal.language.settings.providers.CompilationDatabaseParser" id="org.eclipse.cdt.managedbuilder.core.CompilationDatabaseParser" name="Compilation Database Parser" prefer-non-shared="true"/>
+			<provider build-parser-id="org.eclipse.cdt.managedbuilder.core.GCCBuildCommandParser" cdb-modified-time="1727023475994" cdb-path="/home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/build/compile_commands.json" class="org.eclipse.cdt.managedbuilder.internal.language.settings.providers.CompilationDatabaseParser" id="org.eclipse.cdt.managedbuilder.core.CompilationDatabaseParser" name="Compilation Database Parser" prefer-non-shared="true"/>
 		</extension>
 	</configuration>
 	<configuration id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1289479697" name="Release">

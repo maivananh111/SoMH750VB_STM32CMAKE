@@ -75,9 +75,9 @@ function(import_embedtxt_files build_target data_section)
 		# Set data place section
 		set(SECTION "")
 		if("${data_section}" STREQUAL "DATA_IN_IFLASH")
-			set(SECTION "${SECTION}.data_iflash_section")
+			set(SECTION "${SECTION}.section_data_iflash")
 		else()
-			set(SECTION "${SECTION}.data_eflash_section")
+			set(SECTION "${SECTION}.section_data_eflash")
 		endif()
 		
 		# Set file content

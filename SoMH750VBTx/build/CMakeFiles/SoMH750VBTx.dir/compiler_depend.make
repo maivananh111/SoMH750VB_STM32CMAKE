@@ -72,6 +72,9 @@ CMakeFiles/SoMH750VBTx.dir/main/app_main.c.obj: /home/anh/Projects/CODE/SoM_H750
   /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/strings.h \
   /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/string.h \
   /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/periph/include/periph/qspi.h \
+  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/memory_section.h \
+  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/error_type.h \
+  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/macros.h \
   /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/expression_assert.h
 
 CMakeFiles/SoMH750VBTx.dir/sdk/components/faultanalyzer/faultanalyzer.c.obj: /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/components/faultanalyzer/faultanalyzer.c \
@@ -1651,6 +1654,9 @@ CMakeFiles/SoMH750VBTx.dir/sdk/drivers/periph/source/qspi.c.obj: /home/anh/Proje
   /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_qspi.h \
   /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_uart.h \
   /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_uart_ex.h \
+  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/memory_section.h \
+  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/error_type.h \
+  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/macros.h \
   /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/string.h \
   /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_locale.h \
   /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/strings.h \
@@ -2344,8 +2350,6 @@ CMakeFiles/SoMH750VBTx.dir/sdk/system/ports/port_logger.c.obj: /home/anh/Project
 
 /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/source/stm32h7xx_hal_gpio.c:
 
-/home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c:
-
 /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/source/stm32h7xx_hal_flash.c:
 
 /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/source/stm32h7xx_hal_exti.c:
@@ -2381,6 +2385,10 @@ CMakeFiles/SoMH750VBTx.dir/sdk/system/ports/port_logger.c.obj: /home/anh/Project
 /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/machine/types.h:
 
 /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/sched.h:
+
+/home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_pthreadtypes.h:
+
+/home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_timespec.h:
 
 /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/components/logger/logger.c:
 
@@ -2550,9 +2558,15 @@ config.h:
 
 /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/strings.h:
 
+/home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/memory_section.h:
+
 /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/source/stm32h7xx_hal_dma_ex.c:
 
 /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/string.h:
+
+/home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/source/stm32h7xx_hal_flash_ex.c:
+
+/home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/error_type.h:
 
 /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/source/stm32h7xx_hal_eth_ex.c:
 
@@ -2591,7 +2605,3 @@ config.h:
 /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_sigset.h:
 
 /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_timeval.h:
-
-/home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_timespec.h:
-
-/home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_pthreadtypes.h:

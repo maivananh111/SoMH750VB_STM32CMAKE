@@ -105,7 +105,7 @@ static void fault_diagnosis(void) {
 			LOG_FAULT("Memory management fault is caused by stacking error");
 		if (mfsr & (1<<5U)) //MLSPERR
 			LOG_FAULT("Memory management fault is caused by floating-point lazy state preservation");
-		if ((mfsr & (1<<7U)) && (mfsr & (1<<0U) || mfsr & (1<<1U))) //MMARVALID && (IACCVIOL || DACCVIOL)
+		if ((mfsr & (1<<7U)) && ((mfsr & (1<<0U)) || (mfsr & (1<<1U)))) //MMARVALID && (IACCVIOL || DACCVIOL)
 			LOG_FAULT("The memory management fault occurred address is 0x%08x", mfar);
 	}
 
@@ -123,7 +123,7 @@ static void fault_diagnosis(void) {
 			LOG_FAULT("Bus fault is caused by stacking error");
 		if (bfsr & (1<<5U)) //LSPERR
 			LOG_FAULT("Bus fault is caused by floating-point lazy state preservation");
-		if (bfsr & (1<<7U) && bfsr & (1<<1U)) //BFARVALID && PRECISERR
+		if ((bfsr & (1<<7U)) && (bfsr & (1<<1U))) //BFARVALID && PRECISERR
 			LOG_FAULT("The bus fault occurred address is 0x%08x", bfar);
 	}
 
@@ -282,7 +282,7 @@ void fault_analyze(uint32_t lr, uint32_t sp){
 		/** Ignore FPU register if bit-4 is reset */
 		stack_pointer = stack_del_fpu_regs(lr, stack_pointer);
 		LOG_FAULT("Stack info - pointer: 0x%08x   start: 0x%08x   end: 0x%08x", stack_pointer, stack_start_addr, stack_start_addr + stack_size);
-		/** Dump */
+		/** Dump stack */
 		if (stack_pointer < stack_start_addr || stack_pointer > stack_start_addr + stack_size) {
 			stack_is_overflow = true;
 			dump_stack(stack_start_addr, stack_size, (uint32_t *) stack_pointer);

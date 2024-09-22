@@ -20,7 +20,7 @@
 
 
 
-static const char *TAG = "startup";
+#define TAG "app"
 
 
 
@@ -67,7 +67,7 @@ int app_initialize(void){
 
 static void log_system_info(void){
 	LOGI(TAG, "Application startup.");
-	LOGI(TAG, "Project name: %s",   get_project_name());
+	LOGI(TAG, "%s %s[%s]",       get_project_name(), get_build_version(), get_build_datetime());
 	LOGI(TAG, "Build target: %s",   get_build_target());
 	LOGI(TAG, "Target name : %s",   get_target_name());
 	LOGI(TAG, "Target id   : 0x%x", get_cpu_id());

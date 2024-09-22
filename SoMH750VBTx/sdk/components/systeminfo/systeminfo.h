@@ -23,6 +23,8 @@ extern "C"{
 
 const char *get_project_name(void);
 const char *get_build_target(void);
+const char *get_build_version(void);
+const char *get_build_datetime(void);
 const char *get_target_name(void);
 
 

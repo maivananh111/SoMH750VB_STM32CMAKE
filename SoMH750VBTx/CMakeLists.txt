@@ -3,8 +3,12 @@ cmake_minimum_required(VERSION 3.20)
 find_package(Python 3 REQUIRED)
 ############ CHANGE BUILD TARGET NAME ############
 get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_LIST_DIR} NAME)
+
 set(BUILD_TARGET                ${PROJECT_NAME})
+set(BUILD_VERSION               v0.0.1)  
 set(TARGET_NAME                 STM32H750xx)    
+  
+
 set(CMAKE_BUILD_DIR             "build")
 set(CMAKE_TOOLCHAIN_FILE 		"sdk/tools/gcc-arm-none-eabi.cmake")
 set(CONFIG_H_IN_FILE            "sdk/tools/config.h.in")
@@ -19,6 +23,9 @@ set(MACROS_DEFINATION
     __PROJECT_NAME__="${PROJECT_NAME}"
     __BUILD_TARGET__="${BUILD_TARGET}"
     __TARGET_NAME__="${TARGET_NAME}"
+    __BUILD_VERSION__="${BUILD_VERSION}"
+    
+    FCPU=480000000UL
 ) 
 
 if(NOT CMAKE_BUILD_TYPE)

@@ -16,10 +16,12 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
   "DEBUG"
+  "FCPU=480000000UL"
   "STM32H750xx"
   "USE_HAL_DRIVER"
   "_GNU_SOURCE"
   "__BUILD_TARGET__=\"SoMH750VBTx\""
+  "__BUILD_VERSION__=\"v0.0.1\""
   "__PROJECT_NAME__=\"SoMH750VBTx\""
   "__TARGET_NAME__=\"STM32H750xx\""
   )

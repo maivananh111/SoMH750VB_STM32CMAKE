@@ -21,14 +21,14 @@ extern "C"{
 
 #define RETURN_ON_FALSE(__EXPRESSION__, __TAG__, __FORMAT__, ...) {\
 	if(!__EXPRESSION__){\
-		(__TAG__ != NULL)? LOGA(__TAG__, "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
+		(__TAG__ != NULL)? LOGE(__TAG__, "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
 		return;\
 	}\
 }
 
 #define RETURNVAL_ON_FALSE(__EXPRESSION__, __RETURNCODE__, __TAG__, __FORMAT__, ...) {\
 	if(!__EXPRESSION__){\
-		(__TAG__ != NULL)? LOGA(__TAG__, "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
+		(__TAG__ != NULL)? LOGE(__TAG__, "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
 		return __RETURNCODE__;\
 	}\
 }
@@ -36,7 +36,7 @@ extern "C"{
 
 #define GOTO_ON_FALSE(__EXPRESSION__, __LABEL__, __TAG__, __FORMAT__, ...) {\
 	if(!__EXPRESSION__){\
-		(__TAG__ != NULL)? LOGA(__TAG__, "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
+		(__TAG__ != NULL)? LOGE(__TAG__, "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
 		goto __LABEL__;\
 	}\
 }
@@ -44,14 +44,14 @@ extern "C"{
 
 #define BREAK_ON_FALSE(__EXPRESSION__, __TAG__, __FORMAT__, ...) {\
 	if(!__EXPRESSION__){\
-		(__TAG__ != NULL)? LOGA(__TAG__,  "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
+		(__TAG__ != NULL)? LOGE(__TAG__,  "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
 		break;\
 	}\
 }
 
 #define CONTINUE_ON_FALSE(__EXPRESSION__, __TAG__, __FORMAT__, ...) {\
 	if(!__EXPRESSION__){\
-		(__TAG__ != NULL)? LOGA(__TAG__,  "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
+		(__TAG__ != NULL)? LOGE(__TAG__,  "Assert failed at %s->%s[%d]>>> " __FORMAT__, __FILE__, __func__, __LINE__, ##__VA_ARGS__) : (void)0; \
 		continue;\
 	}\
 }

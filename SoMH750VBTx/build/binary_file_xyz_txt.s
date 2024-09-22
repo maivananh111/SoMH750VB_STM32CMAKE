@@ -1,4 +1,4 @@
-.section .data_eflash_section, "a"
+.section .section_data_eflash, "a"
 .align 4
 .global _binary_file_xyz_txt
 _binary_file_xyz_txt: 

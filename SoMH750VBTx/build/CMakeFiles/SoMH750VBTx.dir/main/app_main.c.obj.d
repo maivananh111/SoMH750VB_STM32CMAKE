@@ -70,4 +70,7 @@ CMakeFiles/SoMH750VBTx.dir/main/app_main.c.obj: \
  /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/strings.h \
  /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/string.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/periph/include/periph/qspi.h \
+ /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/memory_section.h \
+ /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/error_type.h \
+ /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/macros.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/expression_assert.h

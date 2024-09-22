@@ -9,6 +9,11 @@
 #define SDK_DRIVERS_PERIPH__QSPI_H_
 
 #include "stm32h7xx_hal.h"
+#include "memory_section.h"
+#include "error_type.h"
+
+
+
 extern QSPI_HandleTypeDef hqspi;
 
 
@@ -47,8 +52,6 @@ extern QSPI_HandleTypeDef hqspi;
 #define JEDECID_READ_CMD 0x9F
 
 
-
-
 typedef struct{
 	uint16_t commid;
 	uint8_t mfid;
@@ -58,19 +61,21 @@ typedef struct{
 } qspi_flash_info_t;
 
 
-uint8_t qspi_init(void);
-uint8_t qspi_deinit(void);
+errno_t IRAMFUNC_ATTR qspi_init(void);
+errno_t IRAMFUNC_ATTR qspi_deinit(void);
 
-uint8_t qspi_read_info(qspi_flash_info_t *pinfo);
+errno_t IRAMFUNC_ATTR qspi_read_info(qspi_flash_info_t *pinfo);
 
-uint8_t qspi_erase_sector(uint32_t saddress, uint32_t eaddress) __attribute__((section(".ram_d3_section")));
-uint8_t qspi_write_memory(uint32_t waddress, uint8_t *wbuffer, uint32_t wsize) __attribute__((section(".ram_d3_section")));
-uint8_t qspi_read_memmory(uint32_t raddress, uint8_t *rbuffer, uint32_t rsize);
+errno_t IRAMFUNC_ATTR qspi_erase_chip(void);
+errno_t IRAMFUNC_ATTR qspi_erase_sector(uint32_t saddress, uint32_t eaddress);
 
-uint8_t qspi_enter_memory_mapped_mode(void) __attribute__((section(".ram_d3_section")));
-uint8_t qspi_exit_memory_mapped_mode(void) __attribute__((section(".ram_d3_section")));
+errno_t IRAMFUNC_ATTR qspi_write_memory(uint32_t waddress, uint8_t *wbuffer, uint32_t wsize);
+errno_t IRAMFUNC_ATTR qspi_read_memmory(uint32_t raddress, uint8_t *rbuffer, uint32_t rsize);
 
-uint8_t qspi_erase_chip(void) __attribute__((section(".ram_d3_section")));
+errno_t IRAMFUNC_ATTR qspi_enter_memory_mapped_mode(void);
+errno_t IRAMFUNC_ATTR qspi_exit_memory_mapped_mode(void);
+
+
 
 
 

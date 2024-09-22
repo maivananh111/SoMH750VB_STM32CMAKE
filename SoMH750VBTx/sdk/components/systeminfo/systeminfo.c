@@ -44,9 +44,18 @@ const char *get_build_target(void){
 	return __BUILD_TARGET__;
 }
 
+const char *get_build_version(void){
+	return __BUILD_VERSION__;
+}
+
+const char *get_build_datetime(void){
+	return __DATE__ " " __TIME__;
+}
+
 const char *get_target_name(void){
 	return __TARGET_NAME__;
 }
+
 
 
 

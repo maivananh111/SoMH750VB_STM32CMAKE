@@ -53,6 +53,9 @@ CMakeFiles/SoMH750VBTx.dir/sdk/drivers/periph/source/qspi.c.obj: \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_qspi.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_uart.h \
  /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/drivers/hal/include/stm32h7xx_hal_uart_ex.h \
+ /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/memory_section.h \
+ /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/error_type.h \
+ /home/anh/Projects/CODE/SoM_H750VBTx/SoMH750VBTx/sdk/common/include/macros.h \
  /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/string.h \
  /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/sys/_locale.h \
  /home/anh/ProgramFiles/stm32cube/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.100.202403111256/tools/arm-none-eabi/include/strings.h \

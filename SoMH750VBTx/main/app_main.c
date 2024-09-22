@@ -18,14 +18,14 @@ extern const unsigned char _binary_file_xyz_txt[];
 static const char *TAG = "MAIN";
 
 
-void write_flash(void) __attribute__((section(".ram_d3_section")));
+//void write_flash(void) __attribute__((section(".ram_d3_section")));
+//
+//void write_flash(void){
+//	LOGW("QSPI", "start write to flash");
 
-void write_flash(void){
-	LOGW("QSPI", "start write to flash");
-
-	RETURN_ON_FALSE(0, "CC", "abcd");
-	taskENTER_CRITICAL();
-	__disable_irq();
+//	RETURN_ON_FALSE(0, "CC", "abcd");
+//	taskENTER_CRITICAL();
+//	__disable_irq();
 //	qspi_exit_memory_mapped_mode();
 //
 //	if(qspi_erase_sector(0x400000, 0x4000FF) != HAL_OK)
@@ -35,11 +35,11 @@ void write_flash(void){
 //		LOGE(TAG, "qspi write memory failed");
 //
 //	qspi_enter_memory_mapped_mode();
-	__enable_irq();
-	taskEXIT_CRITICAL();
-
-	LOGW("QSPI", "end write to flash");
-}
+//	__enable_irq();
+//	taskEXIT_CRITICAL();
+//
+//	LOGW("QSPI", "end write to flash");
+//}
 
 
 
@@ -47,10 +47,10 @@ void task1(void *param){
 	(void)param;
 
 	while(1){
-		write_flash();
+//		write_flash();
 
 		vTaskDelay(1000);
-//		LOGI("II", "%s", z);
+		LOGI("II", "%s", "abcd");
 	}
 }
 

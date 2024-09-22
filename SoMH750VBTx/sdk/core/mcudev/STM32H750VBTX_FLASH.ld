@@ -35,7 +35,10 @@
 ENTRY(Reset_Handler)
 
 /* Highest address of the user mode stack */
-_estack = ORIGIN(RAM_D1) + LENGTH(RAM_D1);    /* end of RAM */
+_sstack = ORIGIN(RAM_D1);    					/* start of RAM */
+_estack = ORIGIN(RAM_D1) + LENGTH(RAM_D1);    	/* end of RAM */
+_stext  = ORIGIN(EFLASH);    					/* start of TEXT */
+_etext  = ORIGIN(EFLASH) + LENGTH(EFLASH);    	/* end of TEXT */
 /* Generate a link error if heap and stack don't fit into RAM */
 _Min_Heap_Size = 0x200;      /* required amount of heap  */
 _Min_Stack_Size = 0x400; /* required amount of stack */
@@ -118,22 +121,6 @@ SECTIONS
     KEEP (*(.fini_array*))
     PROVIDE_HIDDEN (__fini_array_end = .);
   } >EFLASH
-  
-  .data_iflash_section (READONLY):
-  {
-    . = ALIGN(4);
-    *(.data_iflash_section)
-    *(.data_iflash_section*)
-    . = ALIGN(4);
-  } >IFLASH
-  
-  .data_eflash_section (READONLY):
-  {
-    . = ALIGN(4);
-    *(.data_eflash_section)
-    *(.data_eflash_section*)
-    . = ALIGN(4);
-  } >EFLASH
 
   /* used by the startup to initialize data */
   _sidata = LOADADDR(.data);
@@ -178,6 +165,98 @@ SECTIONS
     . = . + _Min_Stack_Size;
     . = ALIGN(8);
   } >RAM_D1
+
+
+
+
+
+
+
+
+
+  /* IFLASH text section */
+  .section_data_iflash (READONLY):
+  {
+    . = ALIGN(4);
+    *(.section_data_iflash)
+    *(.section_data_iflash*)
+    . = ALIGN(4);
+  } >IFLASH
+  
+  /* EFLASH text section */
+  .section_data_eflash (READONLY):
+  {
+    . = ALIGN(4);
+    *(.section_data_eflash)
+    *(.section_data_eflash*)
+    . = ALIGN(4);
+  } >EFLASH
+  
+  /* RAMD1 data section */
+  .section_ramd1 :
+  {
+    . = ALIGN(4);          
+    _ssection_ramd1 = .;     
+    *(.section_ramd1)        
+    . = ALIGN(4);          
+    _esection_ramd1 = .;     
+  } >RAM_D1
+  
+  /* RAMD2 data section */
+  .section_ramd2 :
+  {
+    . = ALIGN(4);          
+    _ssection_ramd2 = .;     
+    *(.section_ramd2)        
+    . = ALIGN(4);          
+    _esection_ramd2 = .;     
+  } >RAM_D2
+  
+  /* RAMD3 data section */
+  .section_ramd3 :
+  {
+    . = ALIGN(4);          
+    _ssection_ramd3 = .;     
+    *(.section_ramd3)        
+    . = ALIGN(4);          
+    _esection_ramd3 = .;     
+  } >RAM_D3
+  
+  /* RAMDTCM data section */
+  .section_ramdtcm :
+  {
+    . = ALIGN(4);          
+    _ssection_ramdtcm = .;     
+    *(.section_ramdtcm)        
+    . = ALIGN(4);          
+    _esection_ramdtcm = .;     
+  } >DTCMRAM
+
+  /* RAMDTCM data section */
+  .section_ramitcm :
+  {
+    . = ALIGN(4);          
+    _ssection_ramitcm = .;     
+    *(.section_ramitcm)        
+    . = ALIGN(4);          
+    _esection_ramitcm = .;     
+  } >ITCMRAM
+  
+  /* Functions executable from RAM */
+  .section_function_in_ram : {
+    . = ALIGN(4);
+    _ssection_function_in_ram = .; 
+    *(.section_function_in_ram)
+    *(.section_function_in_ram.*)
+    . = ALIGN(4);
+    _esection_function_in_ram = .; 
+  } >RAM_D3 AT> FLASH
+
+
+
+
+
+
 
   /* Remove information from the standard libraries */
   /DISCARD/ :

@@ -16,29 +16,22 @@ extern "C"{
 
 
 
-#define bytes_to_words(bytes)                      		(bytes/4U)
-#define bytes_to_kilobytes(bytes)                      	(bytes/1024U)
-#define words_to_bytes(words)							(words*4U)
-#define words_to_kilobytes(words)						((words*4U)/1024U)
-#define kilobytes_to_bytes(kbytes)                      (kbytes*1024U)
-#define kilobytes_to_words(kbytes)                      ((kbytes*1024U)/4U)
+#define bytes_to_words(bytes)                      		  (bytes/4U)
+#define bytes_to_kilobytes(bytes)                      	  (bytes/1024U)
+#define words_to_bytes(words)							  (words*4U)
+#define words_to_kilobytes(words)						  ((words*4U)/1024U)
+#define kilobytes_to_bytes(kbytes)                        (kbytes*1024U)
+#define kilobytes_to_words(kbytes)                        ((kbytes*1024U)/4U)
 
 #define make_string(s) #s
 
-#define CODE_FILE __FILE__
-#define CODE_FUNC __FUNCTION__
-#define CODE_LINE __LINE__
-#define COMPILE_TIME __TIME__
-#define COMPILE_DATE __DATE__
+#define delay_us_nop(__US__)                             			\
+	do {   															\
+		uint64_t ovrtick = __US__*4UL*FCPU/1000000UL;				\
+		for(uint64_t tick=0; tick<ovrtick; tick++) __NOP();			\
+	} while(0)
 
-#define IFLASH_ATTR __attribute__((section(".data_iflash_section")))
-#define EFLASH_ATTR __attribute__((section(".data_eflash_section")))
 
-#define IRAMDTCM_ATTR
-#define IRAMD1_ATTR
-#define IRAMD2_ATTR
-#define IRAMD3_ATTR
-#define IRAMITCM_ATTR
 
 #ifdef __cplusplus
 }
